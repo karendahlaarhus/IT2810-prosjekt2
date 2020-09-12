@@ -1,13 +1,10 @@
 import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
+import Frontpage from "./components/Frontpage";
 
 function App() {
-  return (
-    <div>
-      <h1>Velkommen</h1>
-    </div>
-  );
+  return <Frontpage />;
 }
 
 export default App;
