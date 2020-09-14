@@ -8,6 +8,9 @@ export default function Gallery() {
       <p>Gallery comes here</p>
       <Buttons></Buttons>
       <img alt="SVG displayed here" src={"http://s.cdpn.io/3/kiwi.svg"} />
+
+    
     </div>
+  
   );
 }

@@ -3,7 +3,7 @@ import React from "react";
 type ButtonProps = {
   //TODO
 };
-
+// eslint-disable-next-line
 const Buttons: React.FC<ButtonProps> = ({}) => {
   function handleColors() {
     return 0; //TODO: endre farge
