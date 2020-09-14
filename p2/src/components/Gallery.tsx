@@ -9,6 +9,13 @@ export default function Gallery() {
       <p>Gallery comes here</p>
       <Buttons></Buttons>
       <Poetry></Poetry>
+      <div>
+        <button>Picture 1</button>
+        <button>Picture 2</button>
+        <button>Picture 3</button>
+        <button>Picture 4</button>
+        <button>Picture 5</button>
+      </div>
     </div>
   );
 }
