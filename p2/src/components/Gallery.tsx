@@ -5,9 +5,9 @@ import Buttons from "./Buttons";
 export default function Gallery() {
   return (
     <div className="gallery">
-      <p>Gallery comes here</p>
+      <h2>Gallery comes here</h2>
+      <p>With more text</p>
       <Buttons></Buttons>
-      <img alt="SVG displayed here" src={"http://s.cdpn.io/3/kiwi.svg"} />
     </div>
   );
 }
