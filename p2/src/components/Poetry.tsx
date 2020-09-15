@@ -1,14 +1,34 @@
 //Source: https://reactjs.org/docs/faq-ajax.html
 
+/* 
+Hvordan laste ned ulike dikt: 
+1) Lag et array med alle url'ene, hent den du vil ha basert på indeks
+2) Finn en url med mange dikt, hent ulike dikt fra siden basert på indeks
+
+Viktig at man ikke henter diktene før det er behov for det, siden skal lastes dynamisk
+
+*/
+
 import React, { useState, useEffect } from "react";
 
-export default function Poetry() {
+interface Props {
+  count: number;
+}
+
+export default function Poetry(props: Props) {
   const url = "https://poetrydb.org/author,title/Taylor;Dance/lines.json";
   const [contents, setContents] = useState([{ lines: [""] }]);
   const [error, setError] = useState(null);
+  const poems: string[] = [
+    "https://poetrydb.org/author,title/Taylor;Dance/lines.json",
+    "https://poetrydb.org/author,title/Taylor;fret/lines.json",
+    "https://poetrydb.org/author,title/Taylor;jesus/lines.json",
+    "https://poetrydb.org/author,title/Taylor;star/lines.json",
+    "https://poetrydb.org/author,title/Taylor;good-natured/lines.json"
+  ];
 
   useEffect(() => {
-    fetch(url)
+    fetch(poems[props.count])
       .then(response => response.json())
       .then(
         data => {
@@ -18,9 +38,7 @@ export default function Poetry() {
           //TODO: gjør noe med error
         }
       );
-  }, [url]);
-
-  console.log(contents);
+  }, [poems[props.count]]);
 
   if (error) {
     return <div>Error: </div>;
