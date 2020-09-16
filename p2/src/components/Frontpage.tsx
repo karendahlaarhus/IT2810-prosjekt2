@@ -5,9 +5,14 @@ export default class Frontpage extends Component {
   render() {
     return (
       <div className="frontpage">
-        <h1>Art Work Gallery</h1>
-        <p>Information and text to make the page look prettier </p> {/* TODO */}
-        <Gallery></Gallery>
+        <div id="header">
+          <h1>Your future interactive gallery</h1>
+          <a href="#gallery">View gallery</a>
+        </div>
+
+        <div id="gallery">
+          <Gallery></Gallery>
+        </div>
       </div>
     );
   }
