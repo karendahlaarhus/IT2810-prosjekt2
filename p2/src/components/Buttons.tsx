@@ -1,10 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 
-type ButtonProps = {
-  //TODO
-};
+function Buttons() {
+  const [changePoem] = useState(0);
 
-const Buttons: React.FC<ButtonProps> = ({}) => {
   function handleColors() {
     return 0; //TODO: endre farge
   }
@@ -28,6 +26,6 @@ const Buttons: React.FC<ButtonProps> = ({}) => {
       </button>
     </div>
   );
-};
+}
 
 export default Buttons;
