@@ -1,10 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 
-type ButtonProps = {
-  //TODO
-};
-// eslint-disable-next-line
-const Buttons: React.FC<ButtonProps> = ({}) => {
+function Buttons() {
+  const [changePoem] = useState(0);
+
   function handleColors() {
     return 0; //TODO: endre farge
   }
@@ -28,6 +26,6 @@ const Buttons: React.FC<ButtonProps> = ({}) => {
       </button>
     </div>
   );
-};
+}
 
 export default Buttons;
