@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Gallery from "./Gallery";
 
 
+
 export default class Frontpage extends Component {
   state = {
     title: 'Dette er fra state'

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Buttons from "./Buttons";
 import Poetry from "./Poetry";
+import Audio from "./Audio";
 //import Icon from "../svg/my_svg";
 
 export default class Gallery extends Component {
@@ -9,7 +10,7 @@ export default class Gallery extends Component {
   };
 
   handleNext = () => {
-    if (this.state.count == 4) {
+    if (this.state.count === 4) {
       this.setState({ count: 0 });
     } else {
       this.setState({ count: this.state.count + 1 });
@@ -17,7 +18,7 @@ export default class Gallery extends Component {
   };
 
   handlePrevious = () => {
-    if (this.state.count == 0) {
+    if (this.state.count === 0) {
       this.setState({ count: 4 });
     } else {
       this.setState({ count: this.state.count - 1 });
@@ -30,6 +31,7 @@ export default class Gallery extends Component {
         <p>Gallery comes here</p>
         <Buttons></Buttons>
         <Poetry count={this.state.count}></Poetry>
+        <Audio count={this.state.count}></Audio>
         <div>
           <button onClick={this.handlePrevious}>Forrige</button>
           <button onClick={this.handleNext}>Neste</button>
