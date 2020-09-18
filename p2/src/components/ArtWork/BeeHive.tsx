@@ -5,7 +5,7 @@ function BeeHive() {
     <div>
         <svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" version="1.1">
 
-            <path d="M200 10 C 180 10, 160 10, 160 30H 240H 160C 160 30, 145 30, 145 50
+            <path id="hive" className="hive"  d="M200 10 C 180 10, 160 10, 160 30H 240H 160C 160 30, 145 30, 145 50
                 H 270
                 H 145
                 C 145 50, 130 50, 130 70
