@@ -14,7 +14,7 @@ function Buttons() {
   }
 
   return (
-    <div>
+    <div id="buttons_interaction">
       <button className="button_interaction" onClick={handleColors}>
         Colors
       </button>

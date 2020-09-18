@@ -1,15 +1,88 @@
 .frontpage {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  width: 100%;
   display: flex;
   align-content: center;
   justify-content: space-around;
   flex-flow: column wrap;
-  margin: 0 auto;
+  margin: auto;
 }
 
 .frontpage > div {
   text-align: center;
 }
+
+/* FOR PHONE AND PORTRAIT*/
+@media (max-width: 375px) and (orientation: portrait) {
+  @supports (display: flex) {
+    .frontpage {
+      flex-direction: column;
+    }
+    h1 {
+      font-size: 60px;
+      padding-top: 120px;
+      padding-bottom: 120px;
+      margin: 20px;
+    }
+    #header {
+      margin: 0 auto;
+      height: 100vh;
+      width: 100vw;
+    }
+    #buttons_interaction {
+      flex-direction: column;
+    }
+  }
+}
+
+/* FOR PHONE AND LANDSCAPE*/
+@media (max-width: 812px) and (orientation: landscape) {
+  @supports (display: flex) {
+    .frontpage {
+      flex-direction: column;
+    }
+    h1 {
+      font-size: 52px;
+    }
+
+    #header {
+      margin: 0 auto;
+      height: 50vh;
+      width: 70vw;
+    }
+    #buttons_interaction {
+      flex-direction: column;
+    }
+  }
+}
+
+/*FOR PAD AND PORTRAIT*/
+@media screen, (min-width: 1366px) and (orientation: portrait) {
+  @supports (display: flex) {
+    .frontpage {
+      flex-direction: column;
+    }
+    h1 {
+      font-size: 94px;
+      padding-top: 160px;
+      padding-bottom: 160px;
+      margin: 20px;
+    }
+    #header {
+      height: 100vh;
+      width: 100vw;
+    }
+    #buttons_interaction {
+      flex-direction: column;
+    }
+
+    #gallery_button {
+      font-size: 62px;
+    }
+  }
+}
+
+/*FOR PAD AND PORTRAIT*/
 
 a {
   text-decoration: none;
@@ -25,7 +98,7 @@ a:hover {
   background-color: teal;
   color: white;
   font-size: 42px;
-  padding: 20% 10% 20% 10%;
+  padding: 18% 5% 18% 5%;
 }
 
 html {
@@ -36,10 +109,4 @@ button {
   font-size: 16px;
   padding: 14px 40px;
   margin: 10px;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
 }
