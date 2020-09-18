@@ -31,7 +31,7 @@ export default class Gallery extends Component {
       <div className="gallery">
         <p>Gallery comes here</p>
         <Buttons></Buttons>
-        <ArtDisplay></ArtDisplay>
+        <ArtDisplay count={this.state.count}></ArtDisplay>
         <Poetry count={this.state.count}></Poetry>
         <div>
           <button onClick={this.handlePrevious}>Forrige</button>
