@@ -16,7 +16,6 @@ interface Props {
 }
 
 export default function Poetry(props: Props) {
-  const url = "https://poetrydb.org/author,title/Taylor;Dance/lines.json";
   const [contents, setContents] = useState([{ lines: [""] }]);
   const [error, setError] = useState(null);
   const poems: string[] = [

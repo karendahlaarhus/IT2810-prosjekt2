@@ -1,16 +1,22 @@
-import React, { Component } from "react";
-const soundfile = require('../assets/media/bensound-ukulele.mp3');
+import React, { useState } from "react";
 
 
-export default class Audio extends Component {
-  render() {
-    return ( 
-    <div className='audioWrapper'>
-        <audio controls>
-            <source src={soundfile}  type='audio/mpeg'/>
+
+export default function Audio() {
+  const [error, setError] = useState(null);
+  const audio = require('../assets/media/bensound-buddy.mp3');
+
+  if (error) {
+    return <div>Error: </div>;
+  } else {
+    return (
+      <div className="audioWrapper">
+        <audio controls >
+          <source src={audio}  type='audio/mpeg'/>
         </audio>
-    </div>
-    )
+      </div>
+    );
   }
 }
+
 
