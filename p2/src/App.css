@@ -1,11 +1,21 @@
 .frontpage {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   width: 100%;
-  display: flex;
-  align-content: center;
-  justify-content: space-around;
-  flex-flow: column wrap;
   margin: auto;
+}
+
+.gallery {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+#box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 3em;
 }
 
 .frontpage > div {
@@ -109,4 +119,8 @@ button {
   font-size: 16px;
   padding: 14px 40px;
   margin: 10px;
+}
+
+.Buttons {
+  flex-grow: 4;
 }
