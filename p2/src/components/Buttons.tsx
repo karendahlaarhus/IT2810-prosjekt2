@@ -4,7 +4,8 @@ function Buttons() {
   const [changePoem] = useState(0);
 
   function handleColors() {
-    return 0; //TODO: endre farge
+    //return 0; //TODO: endre farge
+    console.log("hello");
   }
   function handleMusic() {
     return 0; //TODO: endre musikk

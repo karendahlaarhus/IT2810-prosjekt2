@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import ArtDisplay from "./ArtDisplay";
-import BusSvg from "./ArtWork/BusSvg";
 import Buttons from "./Buttons";
 import Poetry from "./Poetry";
 //import Icon from "../svg/my_svg";
