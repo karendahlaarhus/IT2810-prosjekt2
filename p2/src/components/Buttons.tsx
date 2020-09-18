@@ -1,11 +1,23 @@
 import React, { useState } from "react";
+import $ from 'jquery'; 
+import BusSvg from './ArtWork/BusSvg'
 
 function Buttons() {
   const [changePoem] = useState(0);
 
   function handleColors() {
-    return 0; //TODO: endre farge
+   //TODO: endre farge på bikube
+    jQuery(function() { 
+      if ($(".hive").attr("fill") == "#ffc966" ){
+        $(".hive").attr({ fill: "#917b53" }); 
+      }
+      else{
+        $(".hive").attr({ fill: "#ffc966" }); 
+      }
+    });
   }
+
+
   function handleMusic() {
     return 0; //TODO: endre musikk
   }

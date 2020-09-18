@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import ArtDisplay from "./ArtDisplay";
 import Buttons from "./Buttons";
 import Poetry from "./Poetry";
 import Audio from "./Audio";
@@ -30,6 +31,7 @@ export default class Gallery extends Component {
       <div className="gallery">
         <p>Gallery comes here</p>
         <Buttons></Buttons>
+        <ArtDisplay count={this.state.count}></ArtDisplay>
         <Poetry count={this.state.count}></Poetry>
         <Audio ></Audio>
         <div>
