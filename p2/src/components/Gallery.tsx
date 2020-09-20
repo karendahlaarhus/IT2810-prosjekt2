@@ -37,8 +37,12 @@ export default class Gallery extends Component {
         <Audio></Audio>
 
         <div>
-          <button onClick={this.handlePrevious}>Forrige</button>
-          <button onClick={this.handleNext}>Neste</button>
+          <button className="button_interaction" onClick={this.handlePrevious}>
+            Forrige
+          </button>
+          <button className="button_interaction" onClick={this.handleNext}>
+            Neste
+          </button>
         </div>
       </div>
     );

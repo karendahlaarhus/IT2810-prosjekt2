@@ -9,6 +9,7 @@
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-around;
+  padding-top: 12vw;
 }
 
 #box {
@@ -16,14 +17,54 @@
   flex-direction: row;
   justify-content: space-evenly;
   padding: 3em;
+  padding-top: 20vw;
+  padding-bottom: 20vw;
 }
 
 .frontpage > div {
   text-align: center;
 }
 
-/* FOR PHONE AND PORTRAIT*/
-@media (max-width: 375px) and (orientation: portrait) {
+a {
+  text-decoration: none;
+  color: black;
+  font-size: 8vw;
+}
+
+a:hover {
+  color: white;
+}
+
+#header {
+  width: 100vw;
+  background-color: teal;
+  color: white;
+  font-size: 3vw;
+  padding-top: 12vw;
+  padding-bottom: 10vw;
+  text-align: center;
+}
+
+html {
+  scroll-behavior: smooth !important;
+}
+
+button {
+  font-size: 1.5vw;
+  padding: 13px 40px;
+  margin: 4vw;
+}
+
+.Buttons {
+  flex-grow: 4;
+}
+
+button.button_interaction {
+  font-size: 4vw;
+}
+
+/*SMALLER SCREENS AND PHONES*/
+@media screen and (max-width: 690px) {
   @supports (display: flex) {
     .frontpage {
       flex-direction: column;
@@ -40,87 +81,52 @@
       width: 100vw;
     }
     #buttons_interaction {
+      display: flex;
       flex-direction: column;
+      justify-content: center;
+      margin: auto;
+    }
+
+    #box {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: auto;
     }
   }
 }
 
-/* FOR PHONE AND LANDSCAPE*/
-@media (max-width: 812px) and (orientation: landscape) {
+/*TABLET*/
+@media screen and (max-width: 2318px) and (min-width: 425px) {
   @supports (display: flex) {
     .frontpage {
-      flex-direction: column;
-    }
-    h1 {
-      font-size: 52px;
-    }
-
-    #header {
-      margin: 0 auto;
-      height: 50vh;
-      width: 70vw;
-    }
-    #buttons_interaction {
-      flex-direction: column;
-    }
-  }
-}
-
-/*FOR PAD AND PORTRAIT*/
-@media screen, (min-width: 1366px) and (orientation: portrait) {
-  @supports (display: flex) {
-    .frontpage {
-      flex-direction: column;
+      flex-direction: row;
     }
     h1 {
       font-size: 94px;
-      padding-top: 160px;
       padding-bottom: 160px;
       margin: 20px;
     }
     #header {
-      height: 100vh;
+      height: 80%;
       width: 100vw;
+      padding-top: 20vw;
+      padding-bottom: 28vw;
     }
     #buttons_interaction {
       flex-direction: column;
+      margin: 20px;
     }
 
     #gallery_button {
       font-size: 62px;
     }
+    #box {
+      padding-bottom: 30px;
+    }
+
+    .gallery {
+      padding-top: 5vw;
+    }
   }
-}
-
-/*FOR PAD AND PORTRAIT*/
-
-a {
-  text-decoration: none;
-  color: black;
-}
-
-a:hover {
-  color: white;
-}
-
-#header {
-  width: 100%;
-  background-color: teal;
-  color: white;
-  font-size: 42px;
-  padding: 18% 5% 18% 5%;
-}
-
-html {
-  scroll-behavior: smooth !important;
-}
-
-button {
-  font-size: 16px;
-  padding: 14px 40px;
-  margin: 10px;
-}
-
-.Buttons {
-  flex-grow: 4;
 }
