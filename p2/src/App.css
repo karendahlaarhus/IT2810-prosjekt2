@@ -1,10 +1,24 @@
 .frontpage {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  width: 100%;
+  margin: auto;
+}
+
+.gallery {
   display: flex;
-  align-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
   justify-content: space-around;
-  flex-flow: column wrap;
-  margin: 0 auto;
+  padding-top: 12vw;
+}
+
+#box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 3em;
+  padding-top: 20vw;
+  padding-bottom: 20vw;
 }
 
 .frontpage > div {
@@ -14,6 +28,7 @@
 a {
   text-decoration: none;
   color: black;
+  font-size: 8vw;
 }
 
 a:hover {
@@ -21,11 +36,13 @@ a:hover {
 }
 
 #header {
-  width: 100%;
+  width: 100vw;
   background-color: teal;
   color: white;
-  font-size: 42px;
-  padding: 20% 10% 20% 10%;
+  font-size: 3vw;
+  padding-top: 12vw;
+  padding-bottom: 10vw;
+  text-align: center;
 }
 
 html {
@@ -33,13 +50,83 @@ html {
 }
 
 button {
-  font-size: 16px;
-  padding: 14px 40px;
-  margin: 10px;
+  font-size: 1.5vw;
+  padding: 13px 40px;
+  margin: 4vw;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.Buttons {
+  flex-grow: 4;
+}
+
+button.button_interaction {
+  font-size: 4vw;
+}
+
+/*SMALLER SCREENS AND PHONES*/
+@media screen and (max-width: 690px) {
+  @supports (display: flex) {
+    .frontpage {
+      flex-direction: column;
+    }
+    h1 {
+      font-size: 60px;
+      padding-top: 120px;
+      padding-bottom: 120px;
+      margin: 20px;
+    }
+    #header {
+      margin: 0 auto;
+      height: 100vh;
+      width: 100vw;
+    }
+    #buttons_interaction {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: auto;
+    }
+
+    #box {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: auto;
+    }
+  }
+}
+
+/*TABLET*/
+@media screen and (max-width: 2318px) and (min-width: 425px) {
+  @supports (display: flex) {
+    .frontpage {
+      flex-direction: row;
+    }
+    h1 {
+      font-size: 94px;
+      padding-bottom: 160px;
+      margin: 20px;
+    }
+    #header {
+      height: 80%;
+      width: 100vw;
+      padding-top: 20vw;
+      padding-bottom: 28vw;
+    }
+    #buttons_interaction {
+      flex-direction: column;
+      margin: 20px;
+    }
+
+    #gallery_button {
+      font-size: 62px;
+    }
+    #box {
+      padding-bottom: 30px;
+    }
+
+    .gallery {
+      padding-top: 5vw;
+    }
   }
 }

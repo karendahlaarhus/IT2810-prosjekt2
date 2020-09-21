@@ -1,22 +1,12 @@
 import React, { useState } from "react";
-import $ from 'jquery'; 
-import BusSvg from './ArtWork/BusSvg'
+import BusSvg from "./ArtWork/BusSvg";
 
 function Buttons() {
   const [changePoem] = useState(0);
 
   function handleColors() {
-   //TODO: endre farge på bikube
-    jQuery(function() { 
-      if ($(".hive").attr("fill") == "#ffc966" ){
-        $(".hive").attr({ fill: "#917b53" }); 
-      }
-      else{
-        $(".hive").attr({ fill: "#ffc966" }); 
-      }
-    });
+    //TODO: endre farge på bikube
   }
-
 
   function handleMusic() {
     return 0; //TODO: endre musikk
@@ -26,7 +16,7 @@ function Buttons() {
   }
 
   return (
-    <div>
+    <div id="buttons_interaction">
       <button className="button_interaction" onClick={handleColors}>
         Colors
       </button>
