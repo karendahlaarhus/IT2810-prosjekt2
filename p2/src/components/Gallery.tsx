@@ -9,7 +9,7 @@ import Audio from "./Audio";
 export default class Gallery extends Component {
   state = {
     count: 0,
-    author: "taylor"
+    author: "johnson"
   };
 
   handleNext = () => {

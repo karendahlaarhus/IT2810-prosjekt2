@@ -17,8 +17,8 @@
   flex-direction: row;
   justify-content: space-evenly;
   padding: 3em;
-  padding-top: 20vw;
-  padding-bottom: 20vw;
+  padding-top: 5vw;
+  padding-bottom: 15vw;
 }
 
 .frontpage > div {
