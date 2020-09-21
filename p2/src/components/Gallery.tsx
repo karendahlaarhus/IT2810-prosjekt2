@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import ArtDisplay from "./ArtDisplay";
 import Buttons from "./Buttons";
 import Poetry from "./Poetry";
 import Audio from "./Audio";
@@ -28,13 +29,20 @@ export default class Gallery extends Component {
   render() {
     return (
       <div className="gallery">
-        <p>Gallery comes here</p>
         <Buttons></Buttons>
-        <Poetry count={this.state.count}></Poetry>
-        <Audio ></Audio>
+        <div id="box">
+          <ArtDisplay count={this.state.count}></ArtDisplay>
+          <Poetry count={this.state.count}></Poetry>
+        </div>
+        <Audio></Audio>
+
         <div>
-          <button onClick={this.handlePrevious}>Forrige</button>
-          <button onClick={this.handleNext}>Neste</button>
+          <button className="button_interaction" onClick={this.handlePrevious}>
+            Forrige
+          </button>
+          <button className="button_interaction" onClick={this.handleNext}>
+            Neste
+          </button>
         </div>
       </div>
     );

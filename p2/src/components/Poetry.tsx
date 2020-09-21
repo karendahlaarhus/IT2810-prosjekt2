@@ -19,11 +19,11 @@ export default function Poetry(props: Props) {
   const [contents, setContents] = useState([{ lines: [""] }]);
   const [error, setError] = useState(null);
   const poems: string[] = [
-    "https://poetrydb.org/author,title/Taylor;Dance/lines.json",
-    "https://poetrydb.org/author,title/Taylor;fret/lines.json",
-    "https://poetrydb.org/author,title/Taylor;jesus/lines.json",
-    "https://poetrydb.org/author,title/Taylor;star/lines.json",
-    "https://poetrydb.org/author,title/Taylor;good-natured/lines.json"
+    "https://poetrydb.org/author,title/Bronte;Robbed/lines.json",
+    "https://poetrydb.org/author,title/Bronte;Retirement/lines.json",
+    "https://poetrydb.org/author,title/Finch;Myselfe/lines.json",
+    "https://poetrydb.org/author,title/Jonson;Shadows/lines.json",
+    "https://poetrydb.org/author,title/Bronte;Friendship/lines.json"
   ];
 
   useEffect(() => {

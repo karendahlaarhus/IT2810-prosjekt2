@@ -1,11 +1,13 @@
 import React, { useState } from "react";
+import BusSvg from "./ArtWork/BusSvg";
 
 function Buttons() {
   const [changePoem] = useState(0);
 
   function handleColors() {
-    return 0; //TODO: endre farge
+    //TODO: endre farge på bikube
   }
+
   function handleMusic() {
     return 0; //TODO: endre musikk
   }
@@ -14,7 +16,7 @@ function Buttons() {
   }
 
   return (
-    <div>
+    <div id="buttons_interaction">
       <button className="button_interaction" onClick={handleColors}>
         Colors
       </button>
