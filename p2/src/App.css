@@ -55,10 +55,6 @@ button {
   margin: 4vw;
 }
 
-.Buttons {
-  flex-grow: 4;
-}
-
 button.button_interaction {
   font-size: 4vw;
 }
