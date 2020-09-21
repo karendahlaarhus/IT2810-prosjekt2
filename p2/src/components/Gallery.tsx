@@ -7,7 +7,8 @@ import Audio from "./Audio";
 
 export default class Gallery extends Component {
   state = {
-    count: 0
+    count: 0,
+    music: true
   };
 
   handleNext = () => {
@@ -26,15 +27,27 @@ export default class Gallery extends Component {
     }
   };
 
+  handleMusic = () => {
+    this.setState({music: !this.state.music})
+      /* Dette skal gjøre at musikken loades og klarer å bytte fil, men funker ikke???!!!!
+      , function(){
+      
+      this.refs.audio.pause();
+      this.refs.audio.load();
+      this.refs.audio.play();
+    }) 
+    */
+  };
+
   render() {
     return (
       <div className="gallery">
-        <Buttons></Buttons>
+        <Buttons handleMusic= {this.handleMusic}></Buttons>
         <div id="box">
           <ArtDisplay count={this.state.count}></ArtDisplay>
           <Poetry count={this.state.count}></Poetry>
         </div>
-        <Audio></Audio>
+        <Audio music={this.state.music}></Audio>
 
         <div>
           <button className="button_interaction" onClick={this.handlePrevious}>

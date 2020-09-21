@@ -1,16 +1,16 @@
 import React, { useState } from "react";
-import BusSvg from "./ArtWork/BusSvg";
 
-function Buttons() {
+interface Props{
+  handleMusic: () => void
+}
+
+function Buttons(props: Props) {
   const [changePoem] = useState(0);
 
   function handleColors() {
     //TODO: endre farge på bikube
   }
 
-  function handleMusic() {
-    return 0; //TODO: endre musikk
-  }
   function handlePoetry() {
     return 0; //TODO: endre dikt
   }
@@ -20,7 +20,7 @@ function Buttons() {
       <button className="button_interaction" onClick={handleColors}>
         Colors
       </button>
-      <button className="button_interaction" onClick={handleMusic}>
+      <button className="button_interaction" onClick={props.handleMusic}>
         Music
       </button>
       <button className="button_interaction" onClick={handlePoetry}>

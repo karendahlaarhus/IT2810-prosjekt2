@@ -1,16 +1,22 @@
 import React, { useState } from "react";
 
+interface Props {
+  music: boolean;
+}
 
-
-export default function Audio() {
+export default function Audio(this: any, props: Props) {
   const [error, setError] = useState(null);
-  const audio = require('../assets/media/bensound-buddy.mp3');
+  const audio = props.music === true ? require('../assets/media/bensound-buddy.mp3') : require('../assets/media/bensound-creepy.mp3') ;
+  //const refs = React.createRef();
 
+  console.log(props.music)
+  console.log('inne i audio')
+  console.log(audio)
   if (error) {
     return <div>Error: </div>;
   } else {
     return (
-      <div className="audioWrapper">
+      <div id="audioWrapper">
         <audio controls >
           <source src={audio}  type='audio/mpeg'/>
         </audio>
