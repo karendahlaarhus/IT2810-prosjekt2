@@ -11,7 +11,6 @@ export default class Gallery extends Component {
   };
 
   handleNext = () => {
-    console.log(this.state.count);
     if (this.state.count === 4) {
       this.setState({ count: 0 });
     } else {
@@ -20,7 +19,6 @@ export default class Gallery extends Component {
   };
 
   handlePrevious = () => {
-    console.log(this.state.count);
     if (this.state.count === 0) {
       this.setState({ count: 4 });
     } else {
@@ -56,7 +54,6 @@ export default class Gallery extends Component {
       count = JSON.parse(count_string);
     }
     this.setState({ count, author });
-    console.log(count, author);
   };
 
   render() {
