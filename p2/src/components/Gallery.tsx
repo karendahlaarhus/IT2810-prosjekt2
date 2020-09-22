@@ -30,7 +30,7 @@ export default class Gallery extends Component {
 
   handlePoetry = () => {
     if (this.state.author === "johnson") {
-      this.setState({ author: "taylor" });
+      this.setState({ author: "bronte" });
     } else {
       this.setState({ author: "johnson" });
     }
