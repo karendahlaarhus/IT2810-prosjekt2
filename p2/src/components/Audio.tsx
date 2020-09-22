@@ -9,8 +9,13 @@ export default function Audio(this: any, props: Props) {
   const audio = props.music === true ? require('../assets/media/bensound-buddy.mp3') : require('../assets/media/bensound-creepy.mp3') ;
   //const refs = React.createRef();
 
+  /* const fixAudio = () => {
+    this.pause();
+    audio.load();
+    audio.play();
+  } */
+
   console.log(props.music)
-  console.log('inne i audio')
   console.log(audio)
   if (error) {
     return <div>Error: </div>;

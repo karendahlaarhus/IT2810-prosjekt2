@@ -29,14 +29,6 @@ export default class Gallery extends Component {
 
   handleMusic = () => {
     this.setState({music: !this.state.music})
-      /* Dette skal gjøre at musikken loades og klarer å bytte fil, men funker ikke???!!!!
-      , function(){
-      
-      this.refs.audio.pause();
-      this.refs.audio.load();
-      this.refs.audio.play();
-    }) 
-    */
   };
 
   render() {
