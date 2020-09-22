@@ -17,8 +17,8 @@
   flex-direction: row;
   justify-content: space-evenly;
   padding: 3em;
-  padding-top: 20vw;
-  padding-bottom: 20vw;
+  padding-top: 5vw;
+  padding-bottom: 15vw;
 }
 
 .frontpage > div {
@@ -53,10 +53,6 @@ button {
   font-size: 1.5vw;
   padding: 13px 40px;
   margin: 4vw;
-}
-
-.Buttons {
-  flex-grow: 4;
 }
 
 button.button_interaction {
