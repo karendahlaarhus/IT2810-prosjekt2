@@ -1,16 +1,24 @@
-import React, { Component } from "react";
+import React, { Component, useState } from "react";
 import ArtDisplay from "./ArtDisplay";
-import Buttons from "./Buttons";
 import Poetry from "./Poetry";
 import Audio from "./Audio";
+import Layout from "./Layout";
+import ThemeContext, { themes } from "./theme-context";
 
 //const AuthorContext = React.createContext("taylor");
 
 export default class Gallery extends Component {
+  // const [theme, setTheme] = useState(themes.dark); //for context tutorial video
+
+  // const toggleTheme = () =>
+  // theme === themes.dark
+  // ? setTheme(themes.light)
+  // : setTheme(themes.dark);
+
   state = {
     count: 0,
     music: true,
-    author: "johnson"
+    author: "johnson",
   };
 
   handleNext = () => {
@@ -30,7 +38,7 @@ export default class Gallery extends Component {
   };
 
   handleMusic = () => {
-    this.setState({music: !this.state.music})
+    this.setState({ music: !this.state.music });
   };
   handlePoetry = () => {
     if (this.state.author === "johnson") {
@@ -40,29 +48,47 @@ export default class Gallery extends Component {
     }
   };
 
-  handleColors = () =>{
-    
-  }
+  handleColors = () => {};
 
   render() {
     return (
       <div>
         <div id="buttons_interaction">
-          <button className="button_interaction" onClick={this.handleColors}>Colors</button>
-          <button className="button_interaction" onClick={this.handleMusic}>Music</button>
-          <button className="button_interaction" onClick={this.handlePoetry}>Change author</button>
+          <button className="button_interaction" onClick={this.handleColors}>
+            Colors
+          </button>
+          <button className="button_interaction" onClick={this.handleMusic}>
+            Music
+          </button>
+          <button className="button_interaction" onClick={this.handlePoetry}>
+            Change author
+          </button>
         </div>
         <div className="gallery">
-        <Audio music={this.state.music}></Audio>
-        <div id='gallery-box'>
-          <button id='btnRound' className="button_interaction" onClick={this.handlePrevious}>&#8249;</button>
-            <div id='box'>
+          <Audio music={this.state.music}></Audio>
+          <div id="gallery-box">
+            <button
+              id="btnRound"
+              className="button_interaction"
+              onClick={this.handlePrevious}
+            >
+              &#8249;
+            </button>
+            <div id="box">
               <ArtDisplay count={this.state.count}></ArtDisplay>
-              <Poetry count={this.state.count} author={this.state.author}></Poetry>
+              <Poetry
+                count={this.state.count}
+                author={this.state.author}
+              ></Poetry>
             </div>
-          <button id='btnRound' className="button_interaction" onClick={this.handleNext}  >&#8250;</button>
-        </div>
-          
+            <button
+              id="btnRound"
+              className="button_interaction"
+              onClick={this.handleNext}
+            >
+              &#8250;
+            </button>
+          </div>
         </div>
       </div>
     );
