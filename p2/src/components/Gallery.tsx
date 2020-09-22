@@ -4,8 +4,6 @@ import Buttons from "./Buttons";
 import Poetry from "./Poetry";
 import Audio from "./Audio";
 
-//const AuthorContext = React.createContext("taylor");
-
 export default class Gallery extends Component {
   state = {
     count: 0,
@@ -13,6 +11,7 @@ export default class Gallery extends Component {
   };
 
   handleNext = () => {
+    console.log(this.state.count);
     if (this.state.count === 4) {
       this.setState({ count: 0 });
     } else {
@@ -21,6 +20,7 @@ export default class Gallery extends Component {
   };
 
   handlePrevious = () => {
+    console.log(this.state.count);
     if (this.state.count === 0) {
       this.setState({ count: 4 });
     } else {
@@ -40,9 +40,34 @@ export default class Gallery extends Component {
 
   handleColors = () => {};
 
+  handleFavorite = () => {
+    const { count, author } = this.state;
+
+    localStorage.setItem("count", count.toString());
+    localStorage.setItem("author", author);
+  };
+
+  handleRetrieveFavorite = () => {
+    const count_string = localStorage.getItem("count");
+    const author = localStorage.getItem("author");
+    var count;
+
+    if (count_string != null) {
+      count = JSON.parse(count_string);
+    }
+    this.setState({ count, author });
+    console.log(count, author);
+  };
+
   render() {
     return (
       <div>
+        <button className="favorite" onClick={this.handleFavorite}>
+          Save favorite
+        </button>
+        <button className="favorite" onClick={this.handleRetrieveFavorite}>
+          Retrieve favorite
+        </button>
         <div id="buttons_interaction">
           <button className="button_interaction" onClick={this.handleColors}>
             Colors
