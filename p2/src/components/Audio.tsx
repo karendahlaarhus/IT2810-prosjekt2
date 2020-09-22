@@ -1,17 +1,32 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 
+interface Props {
+  music: boolean;
+}
 
-
-export default function Audio() {
+export default function Audio(this: any, props: Props) {
   const [error, setError] = useState(null);
-  const audio = require('../assets/media/bensound-buddy.mp3');
+  const [audio, setAudio] = useState(require('../assets/media/bensound-buddy.mp3'))
+  const audioRef = React.useRef<HTMLAudioElement>(null);
+  //const audio = props.music ? require('../assets/media/bensound-buddy.mp3') : require('../assets/media/bensound-creepy.mp3') ;
+  
+  useEffect(() => {
+    props.music ? setAudio(require('../assets/media/bensound-buddy.mp3')) : setAudio(require('../assets/media/bensound-creepy.mp3'));
+    
+    if (audioRef.current) {
+      audioRef.current.load();
+    } 
+    
+    console.log(props.music)
+  }, [props.music])
+  
 
   if (error) {
     return <div>Error: </div>;
   } else {
     return (
-      <div className="audioWrapper">
-        <audio controls >
+      <div id="audioWrapper">
+        <audio controls ref={audioRef} >
           <source src={audio}  type='audio/mpeg'/>
         </audio>
       </div>
