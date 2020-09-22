@@ -9,16 +9,13 @@
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-around;
-  padding-top: 12vw;
 }
 
 #box {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  padding: 3em;
-  padding-top: 20vw;
-  padding-bottom: 20vw;
+  align-items: center;
 }
 
 .frontpage > div {
@@ -28,12 +25,45 @@
 a {
   text-decoration: none;
   color: black;
-  font-size: 8vw;
 }
 
 a:hover {
   color: white;
 }
+
+audio{
+  outline: none;
+}
+
+.poetry{
+  height: 350px;
+  overflow: scroll;
+}
+
+
+/* BUTTONS */
+#btnRound{
+  border-radius: 60%; 
+  border-style: none;
+}
+button:hover {
+  background-color: #ddd;
+  color: black;
+}
+button {
+  font-size: 1.5vw;
+  padding: 7px 20px;
+  margin: 2.5vw;
+  outline: none;  
+  border-radius: 20px;
+  border-style: none;
+  background-color: #F1F3F4;
+}
+button.button_interaction {
+  font-size: 2vw;
+}
+/* BUTTONS */
+
 
 #header {
   width: 100vw;
@@ -49,18 +79,21 @@ html {
   scroll-behavior: smooth !important;
 }
 
-button {
-  font-size: 1.5vw;
-  padding: 13px 40px;
-  margin: 4vw;
+div.gallery{
+  padding: 5px;
 }
 
-.Buttons {
-  flex-grow: 4;
+#gallery-box{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 45px;
+  margin-bottom: 5px;
 }
 
-button.button_interaction {
-  font-size: 4vw;
+p{
+  padding: 0;
 }
 
 /*SMALLER SCREENS AND PHONES*/
@@ -73,7 +106,7 @@ button.button_interaction {
       font-size: 60px;
       padding-top: 120px;
       padding-bottom: 120px;
-      margin: 20px;
+      
     }
     #header {
       margin: 0 auto;
@@ -84,14 +117,14 @@ button.button_interaction {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      margin: auto;
+      
     }
 
     #box {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      margin: auto;
+      
     }
   }
 }
