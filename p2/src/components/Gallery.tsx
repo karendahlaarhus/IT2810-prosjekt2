@@ -40,6 +40,10 @@ export default class Gallery extends Component {
     }
   };
 
+  handleColors = () =>{
+    
+  }
+
   render() {
     return (
       <div>
