@@ -35,6 +35,11 @@ audio{
   outline: none;
 }
 
+.poetry{
+  height: 300px;
+  overflow: scroll;
+}
+
 
 /* BUTTONS */
 #btnRound{
