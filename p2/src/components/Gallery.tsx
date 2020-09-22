@@ -9,6 +9,7 @@ import Audio from "./Audio";
 export default class Gallery extends Component {
   state = {
     count: 0,
+    music: true,
     author: "johnson"
   };
 
@@ -28,6 +29,9 @@ export default class Gallery extends Component {
     }
   };
 
+  handleMusic = () => {
+    this.setState({music: !this.state.music})
+  };
   handlePoetry = () => {
     if (this.state.author === "johnson") {
       this.setState({ author: "bronte" });
@@ -35,10 +39,6 @@ export default class Gallery extends Component {
       this.setState({ author: "johnson" });
     }
   };
-
-  handleMusic = () => {};
-
-  handleColors = () => {};
 
   render() {
     return (
@@ -49,7 +49,7 @@ export default class Gallery extends Component {
           <button className="button_interaction" onClick={this.handlePoetry}>Change author</button>
         </div>
         <div className="gallery">
-        <Audio></Audio>
+        <Audio music={this.state.music}></Audio>
         <div id='gallery-box'>
           <button id='btnRound' className="button_interaction" onClick={this.handlePrevious}>&#8249;</button>
             <div id='box'>
