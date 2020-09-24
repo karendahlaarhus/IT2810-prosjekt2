@@ -4,12 +4,12 @@ import React from "react";
 
 export const themes = {
   dark: {
-    color: "white",
-    background: "black",
+    /*color: "white",*/
+    backgroundColor: "black",
   },
   light: {
-    color: "black",
-    background: "white",
+    /*color: "black",*/
+    backgroundColor: "",
   },
 };
 

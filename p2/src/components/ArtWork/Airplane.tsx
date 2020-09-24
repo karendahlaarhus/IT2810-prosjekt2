@@ -6,12 +6,11 @@ import { useContext } from "react";
 export default function Airplane() {
   const theme = useContext(ThemeContext);
   return (
-    <div className="scene">
+    <div className="scene" style={theme}>
       <span className="cloud cloud--small"></span>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         id="plane"
-        style={theme}
         className="plane"
         viewBox="0 0 104 47"
         x="0"
