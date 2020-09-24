@@ -66,6 +66,7 @@ export default class Gallery extends Component {
   };
 
   handleRetrieveFavorite = () => {
+    
     const count_string = localStorage.getItem("count");
     const author = localStorage.getItem("author");
     const music_string = localStorage.getItem("music");

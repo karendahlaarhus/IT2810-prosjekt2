@@ -12,11 +12,9 @@ export default function Audio(this: any, props: Props) {
   
   useEffect(() => {
     props.music ? setAudio(require('../assets/media/bensound-buddy.mp3')) : setAudio(require('../assets/media/bensound-creepy.mp3'));
-    
     if (audioRef.current) {
       audioRef.current.load();
     } 
-    
     console.log(props.music)
   }, [props.music])
   
