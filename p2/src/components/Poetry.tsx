@@ -62,7 +62,7 @@ export default function Poetry(props: Props) {
     return <div>Error: </div>;
   } else {
     return (
-      <div className="poetry">
+      <div className="poetry" >
         {contents[0].lines.map(line => (
           <p>{line}</p>
         ))}

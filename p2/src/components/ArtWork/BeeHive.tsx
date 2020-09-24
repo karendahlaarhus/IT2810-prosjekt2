@@ -43,7 +43,7 @@ function BeeHive() {
                 C 290 70, 290 50, 275 50
                 C 275 50, 275 30, 250 30
                 C 250 30, 250 10, 220 10
-                L 200 10" stroke="black" fill="#ffc966" stroke-width="4"/>
+                L 200 10" stroke="black" fill="#ffc966" strokeWidth="4"/>
 
                 <path d="M200 10 
                 C 180 10, 160 10, 160 30
@@ -81,7 +81,7 @@ function BeeHive() {
                 C 220 250, 227 250, 227 240
                 V 227 160
                 " 
-            stroke="black" fill="#C68928" stroke-width="4"/>
+            stroke="black" fill="#C68928" strokeWidth="4"/>
 
             <path d="M193 160 
                 V 193 205
@@ -106,7 +106,7 @@ function BeeHive() {
                 C 203 215, 213 215, 213 205
                 V 213 195
                 " 
-                stroke="black" fill="#C68928" stroke-width="4"/>
+                stroke="black" fill="#C68928" strokeWidth="4"/>
 
                 <path d="M193 195 
                 V 193 205
@@ -124,7 +124,7 @@ function BeeHive() {
                 C 220 250, 227 250, 227 240
                 V 227 195
                 " 
-                stroke="black" fill="#C68928" stroke-width="4"/>
+                stroke="black" fill="#C68928" strokeWidth="4"/>
 
                 <path d="M213 195 
                 V 213 240
@@ -139,7 +139,7 @@ function BeeHive() {
                 <ellipse cx="215" cy="160" rx="15" ry="15" fill="white" fill-opacity="0.2"/>
 
             <g id="bee-path" transform="translate(85,45)">
-                <path id="motionPath" fill="none" stroke="none" stroke-miterlimit="10" d="M41.903,113.081c0,0-27,24-2,34s50-15,50-15s90-55,119-17
+                <path id="motionPath" fill="none" stroke="none" strokeMiterlimit="10" d="M41.903,113.081c0,0-27,24-2,34s50-15,50-15s90-55,119-17
                 c29,38-25,40-46,16s-135-156-155-124s38,55,103,33s116-62,110-25s-14,31-59,48S54.903,95.081,41.903,113.081z"/>
                 
                 <g id="bee" transform="translate(-234.4, -182.8)">
@@ -152,7 +152,7 @@ function BeeHive() {
             </g>
 
             <g id="bee-path2" transform="translate(85,45)">
-                <path id="motionPath2" fill="none" stroke="none" stroke-miterlimit="10" d="M197.99,18c0,0-135.63,174.71-164.992,121.494
+                <path id="motionPath2" fill="none" stroke="none" strokeMiterlimit="10" d="M197.99,18c0,0-135.63,174.71-164.992,121.494
                 C9,95.995,76.496,98.8,76.496,35.803s-67.497-26.998-49.498,3s160.493,39.192,170.992,73.691s-55.498,46.498-44.998,10.5
                 s53.997-62.997,58.497-79.496S218.989,3,197.99,18z"/>
                 
@@ -166,7 +166,7 @@ function BeeHive() {
             </g>
 
             <g id="bee-path3" transform="translate(85,45)">
-                <path id="motionPath3" fill="none" stroke="none" stroke-miterlimit="10" d="M146.993,56.998c0,0,106.493-56.998-12-56.998
+                <path id="motionPath3" fill="none" stroke="none" strokeMiterlimit="10" d="M146.993,56.998c0,0,106.493-56.998-12-56.998
             S-31.498,19.5,98.995,67.497s133.494,76.495,4.5,85.495c-128.994,9-65.997-35.999-29.999-58.497
             C109.495,71.997,146.993,56.998,146.993,56.998z"/>
                 
@@ -180,7 +180,7 @@ function BeeHive() {
             </g>
 
             <g id="bee-path4" transform="translate(85,45)">
-                <path id="motionPath4" fill="none" stroke="none" stroke-miterlimit="10" d="M158.992,0c0,0-83.996,1.5-38.998,29.999s89.995,32.999,52.497,56.998
+                <path id="motionPath4" fill="none" stroke="none" strokeMiterlimit="10" d="M158.992,0c0,0-83.996,1.5-38.998,29.999s89.995,32.999,52.497,56.998
             s-70.497,71.995-20.999,65.996s41.999-17.999-5.999-58.497c-47.998-40.498,8.999-38.998,29.998-61.497S158.992,0,158.992,0z"/>
                 
                 <g id="bee4" transform="translate(-234.4, -182.8)">
@@ -193,7 +193,7 @@ function BeeHive() {
             </g>
 
             <g id="bee-path5" transform="translate(85,45)">
-                <path id="motionPath5" fill="none" stroke="none" stroke-miterlimit="10" d="M65.997,13.5c0,0-46.499-23.999-38.999,1.5
+                <path id="motionPath5" fill="none" stroke="none" strokeMiterlimit="10" d="M65.997,13.5c0,0-46.499-23.999-38.999,1.5
             s44.998,7.499,34.499,34.498s-71.996,6-25.499,46.498s19.499,38.998,0,40.498s-40.498-52.497,58.497-14.999
             s50.998-13.499,14.999-55.497c-35.998-41.998,3-38.999,35.999-23.999s70.496,6,31.498-17.999S92.996,37.498,65.997,13.5z"/>
                 
