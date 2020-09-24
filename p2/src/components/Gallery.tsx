@@ -3,16 +3,7 @@ import ArtDisplay from "./ArtDisplay";
 import Poetry from "./Poetry";
 import Audio from "./Audio";
 
-//const AuthorContext = React.createContext("taylor");
-
 export default class Gallery extends Component {
-  // const [theme, setTheme] = useState(themes.dark); //for context tutorial video
-
-  // const toggleTheme = () =>
-  // theme === themes.dark
-  // ? setTheme(themes.light)
-  // : setTheme(themes.dark);
-
   state = {
     count: 0,
     music: true,

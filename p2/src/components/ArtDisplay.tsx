@@ -49,8 +49,11 @@ export default function ArtDisplay(props: Props) {
     <OrangeContext.Provider value={orange}>
       <DetailContext.Provider value={detail}>
         <ThemeContext.Provider value={theme}>
-          <button onClick={toggleTheme}>Change color theme</button>
-          <div className="artworks">{artworks[props.count]}</div>
+          <div className="gallery">
+            <div className="artworks">{artworks[props.count]}</div>
+            <br></br>
+            <button onClick={toggleTheme}>Change color theme</button>
+          </div>
         </ThemeContext.Provider>
       </DetailContext.Provider>
     </OrangeContext.Provider>
