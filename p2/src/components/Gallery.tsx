@@ -2,8 +2,6 @@ import React, { Component, useState } from "react";
 import ArtDisplay from "./ArtDisplay";
 import Poetry from "./Poetry";
 import Audio from "./Audio";
-import Layout from "./Layout";
-import ThemeContext, { themes } from "./theme-context";
 
 //const AuthorContext = React.createContext("taylor");
 

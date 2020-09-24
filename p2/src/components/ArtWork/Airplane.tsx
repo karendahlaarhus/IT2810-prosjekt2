@@ -1,10 +1,13 @@
 import React from "react";
 import "./Airplane.css";
-import ThemeContext from "../theme-context";
+//import ThemeContext from "../theme-context";
 import { useContext } from "react";
+//import DetailContext from "../theme-context";
+import { ThemeContext, DetailContext } from "../theme-context";
 
 export default function Airplane() {
   const theme = useContext(ThemeContext);
+  const detail = useContext(DetailContext);
   return (
     <div className="scene" style={theme}>
       <span className="cloud cloud--small"></span>
@@ -19,16 +22,18 @@ export default function Airplane() {
         height="47"
         background-color="#ffffff00"
       >
-        <g id="avion">
+        <g id="avion" style={detail}>
           <path
             d="M20 36C25 38 69 43 80 40 92 38 106 33 104 21 103 13 95 13 90 9 85 5 79 2 76 1 70-1 65 0 60 2 57 3 25 14 23 13 21 12 12 2 9 3 5 4 1 5 1 6 2 7 15 34 20 36Z"
             fill="#0085b2"
+            style={detail}
           />
           <path
             d="M23 36C28 37 69 43 80 40 88 38 98 34 102 29 82 32 22 36 23 36Z"
             stroke="#ffffff00"
             strokeWidth="1"
             fill="#14647f"
+            style={detail}
           />
           <path
             d="M42 39C48 40 60 40 67 40 71 32 72 26 72 26L44 29C44 29 44 35 42 39Z"
@@ -47,12 +52,14 @@ export default function Airplane() {
             stroke="#ffffff00"
             strokeWidth="1"
             fill="#006e96"
+            style={detail}
           />
           <path
             d="M5 14C5 14 6 15 3 19 1 22 10 20 13 17 19 11 17 11 17 11L5 14Z"
             stroke="#ffffff00"
             strokeWidth="1"
             fill="#006e96"
+            style={detail}
           />
           <path
             d="M90 10C88 8 83 4 80 3 78 3 68 7 68 8 70 12 80 8 90 10Z"

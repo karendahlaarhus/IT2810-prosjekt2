@@ -1,9 +1,12 @@
 import * as React from "react";
-import ThemeContext from "../theme-context";
+//import ThemeContext from "../theme-context";
 import { useContext } from "react";
+import { ThemeContext, DetailContext, OrangeContext } from "../theme-context";
 
 function BeeHive() {
   const theme = useContext(ThemeContext);
+  const detail = useContext(DetailContext);
+  const orange = useContext(OrangeContext);
   return (
     <div>
       <svg
@@ -16,6 +19,7 @@ function BeeHive() {
         <path
           id="hive"
           className="hive"
+          style={orange}
           d="M200 10 C 180 10, 160 10, 160 30H 240H 160C 160 30, 145 30, 145 50
                 H 270
                 H 145
@@ -61,6 +65,7 @@ function BeeHive() {
         />
 
         <path
+          style={detail}
           d="M200 10 
                 C 180 10, 160 10, 160 30
                 C 160 30, 145 30, 145 50
@@ -91,6 +96,7 @@ function BeeHive() {
         />
 
         <path
+          style={detail}
           d="M193 160 
                 V 193 205
                 C 193 205, 193 215, 203 215
@@ -107,6 +113,7 @@ function BeeHive() {
         />
 
         <path
+          style={detail}
           d="M193 160 
                 V 193 205
                 C 193 205, 193 215, 203 215
@@ -119,6 +126,7 @@ function BeeHive() {
         />
 
         <path
+          style={detail}
           d="M213 195 
                 V 213 240
                 C 213 240, 213 250, 220 250
@@ -131,6 +139,7 @@ function BeeHive() {
 
         <g id="left-honey">
           <path
+            style={detail}
             d="M193 195 
                 V 193 205
                 C 193 205, 193 215, 203 215
@@ -143,6 +152,7 @@ function BeeHive() {
           />
 
           <path
+            style={detail}
             d="M193 195 
                 V 193 205
                 C 193 205, 193 215, 203 215
@@ -157,6 +167,7 @@ function BeeHive() {
 
         <g id="right-honey">
           <path
+            style={detail}
             d="M213 195 
                 V 213 240
                 C 213 240, 213 250, 220 250
@@ -169,6 +180,7 @@ function BeeHive() {
           />
 
           <path
+            style={detail}
             d="M213 195 
                 V 213 240
                 C 213 240, 213 250, 220 250
@@ -245,6 +257,7 @@ function BeeHive() {
               rx="4"
               ry="8"
               fill="gray"
+              style={orange}
               transform="rotate(-45 240 200)"
             />
             <ellipse
@@ -253,6 +266,7 @@ function BeeHive() {
               rx="4"
               ry="8"
               fill="gray"
+              style={orange}
               transform="rotate(45 230 200)"
             />
           </g>
@@ -279,6 +293,7 @@ function BeeHive() {
               rx="4"
               ry="8"
               fill="gray"
+              style={orange}
               transform="rotate(-45 240 200)"
             />
             <ellipse
@@ -287,6 +302,7 @@ function BeeHive() {
               rx="4"
               ry="8"
               fill="gray"
+              style={orange}
               transform="rotate(45 230 200)"
             />
           </g>

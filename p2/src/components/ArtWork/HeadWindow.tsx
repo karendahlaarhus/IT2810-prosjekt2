@@ -1,10 +1,14 @@
 import * as React from "react";
 import "./HeadWindow.css";
-import ThemeContext from "../theme-context";
+//import ThemeContext from "../theme-context";
 import { useContext } from "react";
+import { ThemeContext, DetailContext, OrangeContext } from "../theme-context";
 
 function SvgComponent() {
   const theme = useContext(ThemeContext);
+  const detail = useContext(DetailContext);
+  const orange = useContext(OrangeContext);
+
   return (
     <svg
       style={theme}
@@ -20,6 +24,7 @@ function SvgComponent() {
       <g clipPath="url(#_face-clip)">
         <circle
           id="sun-second"
+          style={orange}
           cx="237.272"
           cy="129.753"
           r="30.27"
@@ -29,6 +34,7 @@ function SvgComponent() {
           <path
             className="hive"
             id="tree2"
+            style={orange}
             d="M138.542,345.677l83.918,0l0,-129.208c0,0 -3.719,-27.145 -26.964,-27.144c-11.406,0.001 -17.799,10.437 -21.55,19.465c-3.751,9.029 4.505,26.409 -0.955,34.708c-7.021,10.668 -11.427,16.387 -13.504,25.284c-2.077,8.898 3.724,19.245 1.041,28.098c-2.769,9.134 -13.99,18.573 -17.655,26.705c-3.02,6.704 -4.331,22.092 -4.331,22.092Z"
             fill="#2d845c"
           />
@@ -97,11 +103,13 @@ function SvgComponent() {
           />
           <path
             id="sail-left2"
+            style={orange}
             d="M351.991,398.4c-0.222,0.337 -0.242,0.77 -0.05,1.125c0.191,0.356 0.563,0.578 0.966,0.578c11.565,0 68.383,0 68.383,0l0,-106.701c0,0 -60.279,91.333 -69.299,104.998Z"
             fill="#2d845c"
           />
           <path
             id="sail-right2"
+            style={orange}
             d="M493.136,397.894c0.327,0.407 0.392,0.966 0.167,1.437c-0.226,0.472 -0.702,0.772 -1.225,0.772c-13.154,0 -67.587,0 -67.587,0l0,-87.495c0,0 57.706,71.695 68.645,85.286Z"
             fill="#56b49f"
           />
@@ -127,6 +135,7 @@ function SvgComponent() {
         <g id="tree-shadow">
           <path
             id="tree"
+            style={orange}
             d="M138.542,345.677l83.918,0l0,-129.208c0,0 -3.719,-27.145 -26.964,-27.144c-11.406,0.001 -17.799,10.437 -21.55,19.465c-3.751,9.029 4.505,26.409 -0.955,34.708c-7.021,10.668 -11.427,16.387 -13.504,25.284c-2.077,8.898 3.724,19.245 1.041,28.098c-2.769,9.134 -13.99,18.573 -17.655,26.705c-3.02,6.704 -4.331,22.092 -4.331,22.092Z"
             fill="#2d845c"
           />
@@ -195,7 +204,14 @@ function SvgComponent() {
           height="170"
           fill="#56b49f"
         />
-        <circle id="sun" cx="237.272" cy="129.753" r="30.27" fill="#fff" />
+        <circle
+          id="sun"
+          cx="237.272"
+          cy="129.753"
+          r="30.27"
+          fill="#fff"
+          style={orange}
+        />
         <g id="yacht">
           <path
             id="flag"
@@ -204,11 +220,13 @@ function SvgComponent() {
           />
           <path
             id="sail-left"
+            style={orange}
             d="M351.991,398.4c-0.222,0.337 -0.242,0.77 -0.05,1.125c0.191,0.356 0.563,0.578 0.966,0.578c11.565,0 68.383,0 68.383,0l0,-106.701c0,0 -60.279,91.333 -69.299,104.998Z"
             fill="#2d845c"
           />
           <path
             id="sail-right"
+            style={orange}
             d="M493.136,397.894c0.327,0.407 0.392,0.966 0.167,1.437c-0.226,0.472 -0.702,0.772 -1.225,0.772c-13.154,0 -67.587,0 -67.587,0l0,-87.495c0,0 57.706,71.695 68.645,85.286Z"
             fill="#56b49f"
           />

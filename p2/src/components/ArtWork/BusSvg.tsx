@@ -1,10 +1,14 @@
 import * as React from "react";
 import "./BusSvg.css";
-import ThemeContext from "../theme-context";
+//import ThemeContext from "../theme-context";
 import { useContext } from "react";
+import { ThemeContext, DetailContext, OrangeContext } from "../theme-context";
+//import DetailContext from "../theme-context";
 
 function SvgComponent() {
   const theme = useContext(ThemeContext);
+  const detail = useContext(DetailContext);
+  const orange = useContext(OrangeContext);
   return (
     <svg viewBox="0 0 1000 1000" height="300" style={theme}>
       <g id="road1">
@@ -190,16 +194,30 @@ function SvgComponent() {
           d="M464.3 376.4l28.4-6.6L503 389l29.4-15.9 21.5 13.5 13.9-20.5 36 6"
         />
       </g>
-      <g>
-        <path className="st0" d="M335.9 333.3l-292 396.8h807.6z" />
-        <path className="st7" d="M153 581.6l182.9-248.3L523 477.1" />
-        <path className="st0" d="M522.1 297.9L207 730.1l793.3 4.8z" />
+      <g style={orange}>
+        <path
+          className="st0"
+          d="M335.9 333.3l-292 396.8h807.6z"
+          style={orange}
+        />
         <path
           className="st7"
+          d="M153 581.6l182.9-248.3L523 477.1"
+          style={orange}
+        />
+        <path
+          className="st0"
+          d="M522.1 297.9L207 730.1l793.3 4.8z"
+          style={orange}
+        />
+        <path
+          className="st7"
+          style={orange}
           d="M391.4 475.3l130.7-177.4L744 499.4M276.8 414l9.1 11.7 22.1-8.8 28.7 11.1 11.8-11.1 22.4 7.4 12.1-18.5 28.5 11.4 11.2-17.2"
         />
         <path
           className="st7"
+          style={orange}
           d="M464.3 376.4l28.4-6.6L503 389l29.4-15.9 21.5 13.5 13.9-20.5 36 6"
         />
       </g>
@@ -605,6 +623,7 @@ function SvgComponent() {
         <g id="van-body">
           <path
             className="st10"
+            style={detail}
             id="van-body"
             d="M707.9 555.1l-9.4-35.7c-3.7-14.3-15.9-24.7-30.6-26.3-42-4.5-92.9-7.1-152.3-7.1-68 0-172.5 5.2-203.9 8.8-5.7.6-10.6 4.3-12.9 9.6l-18.9 44.2c-8.7 15.6-14 32.8-15.5 50.6l-.4 99.4 21.1.4c-.1-1.4-.2-2.8-.2-4.2 0-30.9 25-55.9 55.9-55.9s55.9 25 55.9 55.9c0 1.8-.1 3.6-.3 5.3l147 1.8c-.3-2.3-.5-4.7-.5-7.1 0-30.9 25-55.9 55.9-55.9s55.9 25 55.9 55.9c0 2.8-.2 5.5-.6 8.2l59.3.6V600c.3-15.1-1.7-30.2-5.5-44.9z"
           />
@@ -650,6 +669,7 @@ function SvgComponent() {
           />
           <path
             className="st14"
+            style={detail}
             d="M721.3 715.2h-43c-5 0-9-4-9-9v-7c0-5 4-9 9-9h43c5 0 9 4 9 9v7c0 4.9-4.1 9-9 9z"
           />
           <path
@@ -666,6 +686,7 @@ function SvgComponent() {
           />
           <path
             className="st8"
+            style={detail}
             d="M612.2 533.5c0-5.3 4.3-9.6 9.6-9.6h28.1a22.49 22.49 0 00-19.6-11.4h-28.1c-5.3 0-9.6 4.3-9.6 9.6v46.7c0 5.3 4.3 9.6 9.6 9.6h10v-44.9z"
           />
           <path
@@ -678,6 +699,7 @@ function SvgComponent() {
           />
           <path
             className="st8"
+            style={detail}
             d="M468.5 531.3c0-5.3 4.3-9.6 9.6-9.6h93.2v-.7c0-5.3-4.3-9.6-9.6-9.6H459.6c-5.3 0-9.6 4.3-9.6 9.6v46.7c0 5.3 4.3 9.6 9.6 9.6h9v-46h-.1z"
           />
           <path
@@ -690,6 +712,7 @@ function SvgComponent() {
           />
           <path
             className="st8"
+            style={detail}
             d="M317.4 576l11.1-46.7c1-4.1 4.2-7 7.8-7h75.3v-.3c0-5.3-3.6-9.6-8.1-9.6h-85.2c-3.6 0-6.8 2.9-7.8 7l-11.1 46.7c-1.4 6.1 2.4 12.1 7.8 12.1h9.9c.1-.7.2-1.4.3-2.2z"
           />
           <path
@@ -711,10 +734,12 @@ function SvgComponent() {
           />
           <path
             className="st14"
+            style={detail}
             d="M534.8 706.7H405.5c-5.4 0-9.7-4.3-9.7-9.7 0-5.4 4.3-9.7 9.7-9.7h129.3c5.4 0 9.7 4.3 9.7 9.7 0 5.3-4.3 9.7-9.7 9.7z"
           />
           <path
             className="st14"
+            style={detail}
             d="M534.8 706.7H405.5c-5.4 0-9.7-4.3-9.7-9.7 0-5.4 4.3-9.7 9.7-9.7h129.3c5.4 0 9.7 4.3 9.7 9.7 0 5.3-4.3 9.7-9.7 9.7z"
           />
           <path className="st15" d="M395.8 687.3h148.7v9.7H395.8z" />
