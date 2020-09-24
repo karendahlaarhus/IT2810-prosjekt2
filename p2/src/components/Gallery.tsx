@@ -5,10 +5,24 @@ import Poetry from "./Poetry";
 import Audio from "./Audio";
 
 export default class Gallery extends Component {
+  //const [count, setCount] = useState(sessionStorage.getItem('count') || 0);
+
   state = {
     count: 0,
     author: "johnson"
   };
+
+  /*   session = () => {
+    console.log(this.state.count);
+    console.log(this.state.author);
+
+    if (this.state.count != 0) {
+      this.setState({ count: sessionStorage.getItem("count") });
+      this.setState({ author: sessionStorage.getItem("author") });
+      console.log(this.state.count);
+      console.log(this.state.author);
+    }
+  }; */
 
   handleNext = () => {
     if (this.state.count === 4) {
@@ -16,6 +30,7 @@ export default class Gallery extends Component {
     } else {
       this.setState({ count: this.state.count + 1 });
     }
+    // sessionStorage.setItem("count", JSON.stringify(this.state.count)); TODO
   };
 
   handlePrevious = () => {
@@ -24,6 +39,7 @@ export default class Gallery extends Component {
     } else {
       this.setState({ count: this.state.count - 1 });
     }
+    //sessionStorage.setItem("count", JSON.stringify(this.state.count)); TODO
   };
 
   handlePoetry = () => {
@@ -32,6 +48,7 @@ export default class Gallery extends Component {
     } else {
       this.setState({ author: "johnson" });
     }
+    //sessionStorage.setItem("author", this.state.author); TODO
   };
 
   handleMusic = () => {};
