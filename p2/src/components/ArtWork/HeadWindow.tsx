@@ -13,6 +13,7 @@ function SvgComponent() {
     <svg
       style={theme}
       width="300"
+      height="300"
       viewBox="0 0 610 600"
       version="1.1"
       xmlns="http://www.w3.org/2000/svg"

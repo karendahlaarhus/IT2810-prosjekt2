@@ -11,8 +11,8 @@ function BeeHive() {
     <div>
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        width="400"
-        height="400"
+        width="300"
+        height="300"
         version="1.1"
         style={theme}
       >

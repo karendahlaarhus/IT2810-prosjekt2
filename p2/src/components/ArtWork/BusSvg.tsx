@@ -10,7 +10,7 @@ function SvgComponent() {
   const detail = useContext(DetailContext);
   const orange = useContext(OrangeContext);
   return (
-    <svg viewBox="0 0 1000 1000" height="300" style={theme}>
+    <svg viewBox="0 0 1000 1000" height="300" width="300" style={theme}>
       <g id="road1">
         <path
           id="road2"

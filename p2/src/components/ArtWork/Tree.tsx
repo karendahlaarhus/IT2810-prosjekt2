@@ -17,7 +17,7 @@ export default function Tree() {
       <div className="col-md-offset-3 col-sm-10 col-md-8 text-center mauto">
         <div className="bg-svg">
           <svg
-            width="100%"
+            width="300"
             style={theme}
             height="300"
             viewBox="0 0 1006 830"
