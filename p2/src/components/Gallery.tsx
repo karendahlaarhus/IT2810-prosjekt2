@@ -4,54 +4,56 @@ import Poetry from "./Poetry";
 import Audio from "./Audio";
 
 export default class Gallery extends Component {
-  //const [count, setCount] = useState(sessionStorage.getItem('count') || 0);
-
   state = {
-    count: 0,
-    music: true,
-    author: "johnson",
+    count: Number(sessionStorage.getItem("count") || 1),
+    music: !!(sessionStorage.getItem("music") || true),
+    author: sessionStorage.getItem("author") || "johnson"
   };
-
-  /*   session = () => {
-    console.log(this.state.count);
-    console.log(this.state.author);
-
-    if (this.state.count != 0) {
-      this.setState({ count: sessionStorage.getItem("count") });
-      this.setState({ author: sessionStorage.getItem("author") });
-      console.log(this.state.count);
-      console.log(this.state.author);
-    }
-  }; */
 
   handleNext = () => {
     if (this.state.count === 4) {
       this.setState({ count: 0 });
+      sessionStorage.setItem("count", JSON.stringify(0));
     } else {
-      this.setState({ count: this.state.count + 1 });
+      const new_count = this.state.count + 1;
+      this.setState({ count: new_count });
+      console.log("count next: " + new_count);
+      sessionStorage.setItem("count", JSON.stringify(this.state.count + 1));
     }
-    // sessionStorage.setItem("count", JSON.stringify(this.state.count)); TODO
   };
 
   handlePrevious = () => {
     if (this.state.count === 0) {
       this.setState({ count: 4 });
+      sessionStorage.setItem("count", JSON.stringify(4));
     } else {
+      const new_count = this.state.count - 1;
       this.setState({ count: this.state.count - 1 });
+      sessionStorage.setItem("count", JSON.stringify(new_count));
     }
-    //sessionStorage.setItem("count", JSON.stringify(this.state.count)); TODO
   };
 
   handleMusic = () => {
     this.setState({ music: !this.state.music });
+    var new_music = null;
+    if (this.state.music === true) {
+      new_music = false;
+      sessionStorage.setItem("music", JSON.stringify(new_music));
+    } else {
+      new_music = true;
+      sessionStorage.setItem("music", JSON.stringify(new_music));
+    }
   };
   handlePoetry = () => {
     if (this.state.author === "johnson") {
       this.setState({ author: "bronte" });
+      const new_author = "bronte";
+      sessionStorage.setItem("author", new_author);
     } else {
       this.setState({ author: "johnson" });
+      const new_author = "johnson";
+      sessionStorage.setItem("author", new_author);
     }
-    //sessionStorage.setItem("author", this.state.author); TODO
   };
 
   handleColors = () => {};
@@ -75,11 +77,12 @@ export default class Gallery extends Component {
     if (count_string != null && music_string != null) {
       count = JSON.parse(count_string);
       music = JSON.parse(music_string);
+      this.setState({ count, author, music });
     }
-    this.setState({ count, author, music });
   };
 
   render() {
+    console.log("count state: " + this.state.count);
     return (
       <div>
         <div id="buttons_interaction">
