@@ -1,6 +1,5 @@
-import React, { Component } from "react";
+import React, { Component, useState } from "react";
 import ArtDisplay from "./ArtDisplay";
-import Buttons from "./Buttons";
 import Poetry from "./Poetry";
 import Audio from "./Audio";
 
@@ -10,7 +9,7 @@ export default class Gallery extends Component {
   state = {
     count: 0,
     music: true,
-    author: "johnson"
+    author: "johnson",
   };
 
   /*   session = () => {
