@@ -82,21 +82,18 @@ export default class Gallery extends Component {
   render() {
     return (
       <div>
-        <button className="favorite" onClick={this.handleFavorite}>
-          Save favorite
-        </button>
-        <button className="favorite" onClick={this.handleRetrieveFavorite}>
-          Retrieve favorite
-        </button>
         <div id="buttons_interaction">
-          <button className="button_interaction" onClick={this.handleColors}>
-            Colors
-          </button>
           <button className="button_interaction" onClick={this.handleMusic}>
-            Music
+            Change music
           </button>
           <button className="button_interaction" onClick={this.handlePoetry}>
             Change author
+          </button>
+          <button className="button_interaction" onClick={this.handleFavorite}>
+            Save favorite
+          </button>
+          <button className="button_interaction" onClick={this.handleRetrieveFavorite}>
+            Retrieve favorite
           </button>
         </div>
         <div className="gallery">

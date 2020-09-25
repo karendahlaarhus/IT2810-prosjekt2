@@ -50,9 +50,11 @@ export default function ArtDisplay(props: Props) {
       <DetailContext.Provider value={detail}>
         <ThemeContext.Provider value={theme}>
           <div className="gallery">
+            
             <div className="artworks">{artworks[props.count]}</div>
-            <br></br>
             <button onClick={toggleTheme}>Change color theme</button>
+            
+            
           </div>
         </ThemeContext.Provider>
       </DetailContext.Provider>
