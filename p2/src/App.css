@@ -41,7 +41,7 @@ audio{
   
 }
 
-/*Makes sure scrollbar on poetry is always visible*/
+/*Makes sure scrollbar on poetry is always visible, code found on stackoverflow: https://stackoverflow.com/questions/7492062/css-overflow-scroll-always-show-vertical-scroll-bar*/
 ::-webkit-scrollbar {
   -webkit-appearance: none;
   width: 7px;
@@ -167,9 +167,6 @@ p{
 
     #gallery_button {
       font-size: 62px;
-    }
-    #box {
-      padding-bottom: 30px;
     }
 
     .gallery {
