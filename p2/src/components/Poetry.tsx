@@ -20,7 +20,7 @@ export default function Poetry(props: Props) {
   const [contents, setContents] = useState([{ lines: [""] }]);
   const [error, setError] = useState(null);
   var poems: string[] = [];
-  var author_name;
+  var authorName;
   const bronte: string[] = [
     "https://poetrydb.org/author,title/Bronte;Robbed/lines.json",
     "https://poetrydb.org/author,title/Bronte;Retirement/lines.json",
@@ -39,10 +39,10 @@ export default function Poetry(props: Props) {
 
   if (props.author === "bronte") {
     poems = bronte;
-    author_name = "Anne Bronte";
+    authorName = "Anne Bronte";
   } else if (props.author === "johnson") {
     poems = johnson;
-    author_name = "Ben Johnson";
+    authorName = "Ben Johnson";
   }
 
   useEffect(() => {
@@ -53,21 +53,22 @@ export default function Poetry(props: Props) {
           setContents(data);
         },
         error => {
-          //TODO: gjør noe med error
+          setError(error);
         }
       );
   }, [poems[props.count]]);
 
   if (error) {
-    return <div>Error: </div>;
+  return <div>Error: {error}</div>;
   } else {
     return (
       <div className="poetry" >
+        <p>Author: {authorName}</p>
+        <br/>
         {contents[0].lines.map(line => (
           <p>{line}</p>
         ))}
         <br></br>
-        <p>Author: {author_name}</p>
       </div>
     );
   }

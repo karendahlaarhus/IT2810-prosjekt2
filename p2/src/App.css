@@ -31,19 +31,30 @@ a:hover {
   color: white;
 }
 
-audio{
+audio {
   outline: none;
 }
 
-.poetry{
-  height: 350px;
+.poetry {
+  height: 390px;
   overflow: scroll;
 }
 
+/*Makes sure scrollbar on poetry is always visible*/
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
+}
 
 /* BUTTONS */
-#btnRound{
-  border-radius: 60%; 
+#btnRound {
+  border-radius: 60%;
   border-style: none;
 }
 button:hover {
@@ -54,24 +65,23 @@ button {
   font-size: 1.5vw;
   padding: 7px 20px;
   margin: 2.5vw;
-  outline: none;  
+  outline: none;
   border-radius: 20px;
   border-style: none;
-  background-color: #F1F3F4;
+  background-color: #f1f3f4;
 }
 button.button_interaction {
   font-size: 2vw;
 }
-/* BUTTONS */
 
+/* BUTTONS */
 
 #header {
   width: 100vw;
   background-color: teal;
   color: white;
   font-size: 3vw;
-  padding-top: 12vw;
-  padding-bottom: 10vw;
+  padding-top: 20vw;
   text-align: center;
 }
 
@@ -79,25 +89,27 @@ html {
   scroll-behavior: smooth !important;
 }
 
-div.gallery{
+div.gallery {
   padding: 5px;
+  margin-top: 20px;
+  margin-right: 3vw;
 }
 
-#gallery-box{
+#gallery-box {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  padding: 45px;
-  margin-bottom: 5px;
+  padding: 0vw 4.5vw 0vw 4.5vw;
 }
 
-p{
+p {
   padding: 0;
+  margin-top: 0px;
 }
 
 /*SMALLER SCREENS AND PHONES*/
-@media screen and (max-width: 690px) {
+@media screen and (max-width: 959px) {
   @supports (display: flex) {
     .frontpage {
       flex-direction: column;
@@ -106,7 +118,6 @@ p{
       font-size: 60px;
       padding-top: 120px;
       padding-bottom: 120px;
-      
     }
     #header {
       margin: 0 auto;
@@ -123,13 +134,12 @@ p{
       display: flex;
       flex-direction: column;
       justify-content: center;
-      
     }
   }
 }
 
 /*TABLET*/
-@media screen and (max-width: 2318px) and (min-width: 425px) {
+@media screen and (max-width: 2318px) and (min-width: 960px) {
   @supports (display: flex) {
     .frontpage {
       flex-direction: row;
@@ -154,7 +164,7 @@ p{
       font-size: 62px;
     }
     #box {
-      padding-bottom: 30px;
+      padding-bottom: 3vw;
     }
 
     .gallery {
