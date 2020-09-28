@@ -1,10 +1,10 @@
 import React from "react";
 import "./Tree.css";
-//import ThemeContext from "../theme-context";
 import { useContext } from "react";
 import { ThemeContext, DetailContext, OrangeContext } from "../ThemeContext";
 
 export default function Tree() {
+  /* The following variables is used for making changes in the artwork*/
   const theme = useContext(ThemeContext);
   const detail = useContext(DetailContext);
   const orange = useContext(OrangeContext);
@@ -18,6 +18,7 @@ export default function Tree() {
         <div className="bg-svg">
           <svg
             width="300"
+            /* here we use ThemeContext */
             style={theme}
             height="300"
             viewBox="0 0 1006 830"
