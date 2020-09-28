@@ -56,7 +56,7 @@ export default function Poetry(props: Props) {
           setError(error);
         }
       );
-  }, [poems[props.count]]);
+  }, [poems,props.count]);
 
   if (error) {
   return <div>Error: {error}</div>;
@@ -66,7 +66,7 @@ export default function Poetry(props: Props) {
         <p>Author: {authorName}</p>
         <br/>
         {contents[0].lines.map(line => (
-          <p>{line}</p>
+          <p key={line}>{line}</p>
         ))}
         <br></br>
       </div>
