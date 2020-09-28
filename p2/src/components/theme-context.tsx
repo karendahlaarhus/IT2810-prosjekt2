@@ -1,32 +1,30 @@
-import { isWhiteSpaceLike } from "typescript";
-
 import React from "react";
 
 export const themes = {
   dark: {
-    backgroundColor: "pink",
+    backgroundColor: "pink"
   },
   light: {
-    backgroundColor: "lightblue",
-  },
+    backgroundColor: "lightblue"
+  }
 };
 
 export const details = {
   normal: {
-    fill: "", //endre til "" etterpå
+    fill: "" //endre til "" etterpå
   },
   color: {
-    fill: "#808080",
-  },
+    fill: "#808080"
+  }
 };
 
 export const orangeColor = {
   on: {
-    fill: "orange",
+    fill: "orange"
   },
   off: {
-    fill: "",
-  },
+    fill: ""
+  }
 };
 
 export const ThemeContext = React.createContext(themes.dark);
