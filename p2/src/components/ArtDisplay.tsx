@@ -4,10 +4,10 @@ import Airplane from "./ArtWork/Airplane";
 import HeadWindow from "./ArtWork/HeadWindow";
 import Tree from "./ArtWork/Tree";
 import BeeHive from "./ArtWork/BeeHive";
-import { themes } from "./theme-context";
-import { details } from "./theme-context";
-import { orangeColor } from "./theme-context";
-import { ThemeContext, DetailContext, OrangeContext } from "./theme-context";
+import { themes } from "./themeContext";
+import { details } from "./themeContext";
+import { orangeColor } from "./themeContext";
+import { ThemeContext, DetailContext, OrangeContext } from "./themeContext";
 
 interface Props {
   count: number;
