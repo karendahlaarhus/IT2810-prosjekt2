@@ -93,7 +93,7 @@ function BeeHive() {
                 "
           stroke="none"
           fill="black"
-          fill-opacity="0.3"
+          fillOpacity="0.3"
         />
 
         <path
@@ -123,7 +123,7 @@ function BeeHive() {
                 "
           stroke="none"
           fill="black"
-          fill-opacity="0.3"
+          fillOpacity="0.3"
         />
 
         <path
@@ -135,7 +135,7 @@ function BeeHive() {
                 "
           stroke="none"
           fill="black"
-          fill-opacity="0.3"
+          fillOpacity="0.3"
         />
 
         <g id="left-honey">
@@ -162,7 +162,7 @@ function BeeHive() {
                 "
             stroke="none"
             fill="black"
-            fill-opacity="0.3"
+            fillOpacity="0.3"
           />
         </g>
 
@@ -189,7 +189,7 @@ function BeeHive() {
                 "
             stroke="none"
             fill="black"
-            fill-opacity="0.3"
+            fillOpacity="0.3"
           />
         </g>
 
@@ -201,7 +201,7 @@ function BeeHive() {
           rx="15"
           ry="15"
           fill="white"
-          fill-opacity="0.2"
+          fillOpacity="0.2"
         />
 
         <g id="bee-path" transform="translate(85,45)">
