@@ -3,7 +3,9 @@ We have implemented the project using Typescript and Node.js. You run the projec
 
 Enter the folder called `p2` and write `npm start` in your terminal
 
-To run the tests, write `npm run test` in your terminal
+To run the tests, first import `react-test-renderer` by writing `npm i react-test-renderer` in your terminal.  
+To run the test, write: `npm run test`. 
+
 
 ### Component structure
 We have chosen to structure our project by separating the functionalities for music, poetry and art into separate components. Throughout the project we have tried to outsource our code into different components as often as possible, to make the code more clean and functional. It is also easier to understand the project structure by having components that only contain one type of functionality. We have used a mix of both class and functional components, as required.  
@@ -64,7 +66,7 @@ Tablet media query is limited to screen-width between 960px and 2318px.
 
 
 ## Testing
-We have set up testing in Jest, and all tests are written in `App.tests.tsx`. Since the tests in this project not were supposed to be very comprehensive and mainly should show the setup, we only set up a snapshot test of our App component. The test can be run by writing `npm run test` while in the p2 folder. 
+We have set up testing in Jest, and all tests are written in `App.tests.tsx`. Since the tests in this project not were supposed to be very comprehensive and mainly should show the setup, we only set up a snapshot test of our App component. 
 
 We have also user tested our application on multiple units of different size, and performed cross-browser-testing (Safari and Google Chrome). The website has a responsive web design, and its user interface adapts to screens of different sizes. We have mainly used the developer tools in Google Chrome to simulate how the website will respond to different devices and sizes, but we have also tested on an iPhone 11, both horizontally and vertically. 
 During the tests we systematically tested that all elements were shown and functionality worked as expected. 
