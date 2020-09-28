@@ -3,7 +3,7 @@ import "./Airplane.css";
 //import ThemeContext from "../theme-context";
 import { useContext } from "react";
 //import DetailContext from "../theme-context";
-import { ThemeContext, DetailContext } from "../themeContext";
+import { ThemeContext, DetailContext } from "../ThemeContext";
 
 export default function Airplane() {
   const theme = useContext(ThemeContext);
