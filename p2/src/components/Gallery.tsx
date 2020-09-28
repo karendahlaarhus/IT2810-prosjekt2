@@ -1,4 +1,4 @@
-import React, { Component, useState } from "react";
+import React, { Component } from "react";
 import ArtDisplay from "./ArtDisplay";
 import Poetry from "./Poetry";
 import Audio from "./Audio";
@@ -28,8 +28,9 @@ export default class Gallery extends Component {
       sessionStorage.setItem("count", JSON.stringify(4));
     } else {
       const new_count = this.state.count - 1;
-      this.setState({ count: this.state.count - 1 });
-      sessionStorage.setItem("count", JSON.stringify(new_count));
+      this.setState({ count: new_count });
+      console.log("count previous: " + new_count);
+      sessionStorage.setItem("count", JSON.stringify(this.state.count - 1));
     }
   };
 

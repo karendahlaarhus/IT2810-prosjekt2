@@ -20,7 +20,7 @@ export default function Poetry(props: Props) {
   const [contents, setContents] = useState([
     { lines: [""], author: [""], title: [""] }
   ]);
-  const [error, setError] = useState(null);
+  const [error] = useState(null);
   var poems: string[] = [];
 
   const bronte: string[] = [

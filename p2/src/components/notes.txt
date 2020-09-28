@@ -1,0 +1,55 @@
+ /*  constructor(props: any) {
+    super(props);
+    this.state = { count: useState(sessionStorage.getItem("count")) || 0 };
+    this.state = {
+      author: useState(sessionStorage.getItem("author")) || "johnson"
+    };
+    this.state = { music: useState(sessionStorage.getItem("music")) || true };
+  } */
+  //const [count, setCount] = useState(sessionStorage.getItem('count') || 0);
+
+  /* count = useState(sessionStorage.getItem("count")) || 0;
+  author = useState(sessionStorage.getItem("author")) || "johnson";
+  music = useState(sessionStorage.getItem("music")) || true; */
+
+  /* state = {
+    count: 0,
+    music: true,
+    author: "johnson"
+  }; */
+
+  /* session = () => {
+    var cachedCount = sessionStorage.getItem("count");
+    var cachedAuthor = sessionStorage.getItem("author");
+
+    if (cachedCount != null && cachedAuthor != null) {
+      var count_number = JSON.parse(cachedCount);
+      this.setState({ count: count_number });
+      this.setState({ author: cachedAuthor });
+    }
+  };
+ */
+  /*  notNull = () => {
+    var number;
+    if (this.state.count != null) {
+      number = JSON.parse(this.state.count);
+    }
+    return number;
+  }; */
+
+  /*const chachedCount = sessionStorage.getItem('count')
+    if (chachedCount != null){
+      
+    }*/
+  /* 
+  session = () => {
+    console.log(this.state.count);
+    console.log(this.state.author);
+
+    if (this.state.count != 0) {
+      this.setState({ count: sessionStorage.getItem("count") });
+      this.setState({ author: sessionStorage.getItem("author") });
+      console.log(this.state.count);
+      console.log(this.state.author);
+    }
+  }; */
