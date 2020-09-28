@@ -2,7 +2,7 @@ import * as React from "react";
 import "./HeadWindow.css";
 //import ThemeContext from "../theme-context";
 import { useContext } from "react";
-import { ThemeContext, OrangeContext } from "../theme-context";
+import { ThemeContext, OrangeContext } from "../themeContext";
 
 function SvgComponent() {
   const theme = useContext(ThemeContext);

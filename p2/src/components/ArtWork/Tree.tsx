@@ -2,7 +2,7 @@ import React from "react";
 import "./Tree.css";
 //import ThemeContext from "../theme-context";
 import { useContext } from "react";
-import { ThemeContext, DetailContext, OrangeContext } from "../theme-context";
+import { ThemeContext, DetailContext, OrangeContext } from "../themeContext";
 
 export default function Tree() {
   const theme = useContext(ThemeContext);

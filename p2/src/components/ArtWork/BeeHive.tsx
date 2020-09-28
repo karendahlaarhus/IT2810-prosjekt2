@@ -1,7 +1,7 @@
 import * as React from "react";
 //import ThemeContext from "../theme-context";
 import { useContext } from "react";
-import { ThemeContext, DetailContext, OrangeContext } from "../theme-context";
+import { ThemeContext, DetailContext, OrangeContext } from "../themeContext";
 
 function BeeHive() {
   const theme = useContext(ThemeContext);
