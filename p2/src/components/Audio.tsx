@@ -13,6 +13,7 @@ export default function Audio(this: any, props: Props) {
   //const audio = props.music ? require('../assets/media/bensound-buddy.mp3') : require('../assets/media/bensound-creepy.mp3') ;
 
   useEffect(() => {
+<<<<<<< HEAD
     setAudio(require("../assets/media/bensound-buddy.mp3"));
     //props.music ? setAudio(require('../assets/media/bensound-buddy.mp3')) : setAudio(require('../assets/media/bensound-creepy.mp3'));
 
@@ -22,6 +23,15 @@ export default function Audio(this: any, props: Props) {
 
     console.log(props.music);
   }, [props.music]);
+=======
+    props.music ? setAudio(require('../assets/media/bensound-buddy.mp3')) : setAudio(require('../assets/media/bensound-creepy.mp3'));
+    if (audioRef.current) {
+      audioRef.current.load();
+    } 
+    console.log(props.music)
+  }, [props.music])
+  
+>>>>>>> 34e398bd52f1b90cea344100e8a8b9a87e76793e
 
   if (error) {
     return <div>Error: </div>;

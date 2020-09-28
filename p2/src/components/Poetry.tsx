@@ -63,8 +63,9 @@ export default function Poetry(props: Props) {
   } else {
     return (
       <div className="poetry">
-        <p>Author: {contents[0].author}</p>
-        <p>Title: {contents[0].title}</p>
+        <p><b> {contents[0].title}</b></p>
+        <p><b>By: {contents[0].author}</b></p>
+        
         <br></br>
         {contents[0].lines.map(line => (
           <p>{line}</p>

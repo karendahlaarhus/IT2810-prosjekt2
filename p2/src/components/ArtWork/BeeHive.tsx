@@ -1,17 +1,25 @@
 import * as React from "react";
+//import ThemeContext from "../theme-context";
+import { useContext } from "react";
+import { ThemeContext, DetailContext, OrangeContext } from "../theme-context";
 
 function BeeHive() {
+  const theme = useContext(ThemeContext);
+  const detail = useContext(DetailContext);
+  const orange = useContext(OrangeContext);
   return (
     <div>
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        width="400"
-        height="400"
+        width="300"
+        height="300"
         version="1.1"
+        style={theme}
       >
         <path
           id="hive"
           className="hive"
+          style={orange}
           d="M200 10 C 180 10, 160 10, 160 30H 240H 160C 160 30, 145 30, 145 50
                 H 270
                 H 145
@@ -57,6 +65,7 @@ function BeeHive() {
         />
 
         <path
+          style={detail}
           d="M200 10 
                 C 180 10, 160 10, 160 30
                 C 160 30, 145 30, 145 50
@@ -83,10 +92,11 @@ function BeeHive() {
                 "
           stroke="none"
           fill="black"
-          fillOpacity="0.3"
+          fill-opacity="0.3"
         />
 
         <path
+          style={detail}
           d="M193 160 
                 V 193 205
                 C 193 205, 193 215, 203 215
@@ -103,6 +113,7 @@ function BeeHive() {
         />
 
         <path
+          style={detail}
           d="M193 160 
                 V 193 205
                 C 193 205, 193 215, 203 215
@@ -111,10 +122,11 @@ function BeeHive() {
                 "
           stroke="none"
           fill="black"
-          fillOpacity="0.3"
+          fill-opacity="0.3"
         />
 
         <path
+          style={detail}
           d="M213 195 
                 V 213 240
                 C 213 240, 213 250, 220 250
@@ -122,11 +134,12 @@ function BeeHive() {
                 "
           stroke="none"
           fill="black"
-          fillOpacity="0.3"
+          fill-opacity="0.3"
         />
 
         <g id="left-honey">
           <path
+            style={detail}
             d="M193 195 
                 V 193 205
                 C 193 205, 193 215, 203 215
@@ -139,6 +152,7 @@ function BeeHive() {
           />
 
           <path
+            style={detail}
             d="M193 195 
                 V 193 205
                 C 193 205, 193 215, 203 215
@@ -147,12 +161,13 @@ function BeeHive() {
                 "
             stroke="none"
             fill="black"
-            fillOpacity="0.3"
+            fill-opacity="0.3"
           />
         </g>
 
         <g id="right-honey">
           <path
+            style={detail}
             d="M213 195 
                 V 213 240
                 C 213 240, 213 250, 220 250
@@ -165,6 +180,7 @@ function BeeHive() {
           />
 
           <path
+            style={detail}
             d="M213 195 
                 V 213 240
                 C 213 240, 213 250, 220 250
@@ -172,7 +188,7 @@ function BeeHive() {
                 "
             stroke="none"
             fill="black"
-            fillOpacity="0.3"
+            fill-opacity="0.3"
           />
         </g>
 
@@ -184,7 +200,7 @@ function BeeHive() {
           rx="15"
           ry="15"
           fill="white"
-          fillOpacity="0.2"
+          fill-opacity="0.2"
         />
 
         <g id="bee-path" transform="translate(85,45)">
@@ -241,6 +257,7 @@ function BeeHive() {
               rx="4"
               ry="8"
               fill="gray"
+              style={orange}
               transform="rotate(-45 240 200)"
             />
             <ellipse
@@ -249,6 +266,7 @@ function BeeHive() {
               rx="4"
               ry="8"
               fill="gray"
+              style={orange}
               transform="rotate(45 230 200)"
             />
           </g>
@@ -275,6 +293,7 @@ function BeeHive() {
               rx="4"
               ry="8"
               fill="gray"
+              style={orange}
               transform="rotate(-45 240 200)"
             />
             <ellipse
@@ -283,6 +302,7 @@ function BeeHive() {
               rx="4"
               ry="8"
               fill="gray"
+              style={orange}
               transform="rotate(45 230 200)"
             />
           </g>
