@@ -6,7 +6,7 @@ import Audio from "./Audio";
 export default class Gallery extends Component {
   state = {
     count: Number(sessionStorage.getItem("count") || 1),
-    music: !!(sessionStorage.getItem("music") || true),
+    music: !sessionStorage.getItem("music"),
     author: sessionStorage.getItem("author") || "johnson"
   };
 
@@ -17,7 +17,6 @@ export default class Gallery extends Component {
     } else {
       const new_count = this.state.count + 1;
       this.setState({ count: new_count });
-      console.log("count next: " + new_count);
       sessionStorage.setItem("count", JSON.stringify(this.state.count + 1));
     }
   };
@@ -35,13 +34,12 @@ export default class Gallery extends Component {
 
   handleMusic = () => {
     this.setState({ music: !this.state.music });
-    var new_music = null;
-    if (this.state.music === true) {
-      new_music = false;
-      sessionStorage.setItem("music", JSON.stringify(new_music));
+    const new_music = !this.state.music;
+
+    if (new_music === true) {
+      sessionStorage.setItem("music", JSON.stringify(true));
     } else {
-      new_music = true;
-      sessionStorage.setItem("music", JSON.stringify(new_music));
+      sessionStorage.setItem("music", JSON.stringify(false));
     }
   };
   handlePoetry = () => {
@@ -67,7 +65,6 @@ export default class Gallery extends Component {
   };
 
   handleRetrieveFavorite = () => {
-    
     const count_string = localStorage.getItem("count");
     const author = localStorage.getItem("author");
     const music_string = localStorage.getItem("music");
@@ -82,7 +79,8 @@ export default class Gallery extends Component {
   };
 
   render() {
-    console.log("count state: " + this.state.count);
+    console.log("current count state: " + this.state.count);
+    console.log("current music state: " + this.state.music);
     return (
       <div>
         <div id="buttons_interaction">
@@ -95,7 +93,10 @@ export default class Gallery extends Component {
           <button className="button_interaction" onClick={this.handleFavorite}>
             Save favorite
           </button>
-          <button className="button_interaction" onClick={this.handleRetrieveFavorite}>
+          <button
+            className="button_interaction"
+            onClick={this.handleRetrieveFavorite}
+          >
             Retrieve favorite
           </button>
         </div>
