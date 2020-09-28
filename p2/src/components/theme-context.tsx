@@ -1,5 +1,3 @@
-import { isWhiteSpaceLike } from "typescript";
-
 import React from "react";
 
 export const themes = {

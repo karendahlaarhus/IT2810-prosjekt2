@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from "react";
-import { JsxAttribute, JsxChild } from "typescript";
+import React, { useState } from "react";
 import BusSvg from "./ArtWork/BusSvg";
 import Airplane from "./ArtWork/Airplane";
 import HeadWindow from "./ArtWork/HeadWindow";
@@ -26,7 +25,7 @@ export default function ArtDisplay(props: Props) {
   //   : setDetail(details.color);
 
   function toggleTheme() {
-    if (detail == details.color) {
+    if (detail === details.color) {
       setTheme(themes.light);
       setDetail(details.normal);
       setOrange(orangeColor.off);

@@ -1,4 +1,4 @@
-import React, { Component, useState } from "react";
+import React, { Component } from "react";
 import ArtDisplay from "./ArtDisplay";
 import Poetry from "./Poetry";
 import Audio from "./Audio";
