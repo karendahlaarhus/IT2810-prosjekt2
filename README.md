@@ -1,5 +1,5 @@
 # Prosjekt 2
-Lenke til gitpod <https://df1a109d-e82b-4bff-9fcf-4df83a05b2b2.ws.gitpod.idi.ntnu.no/>
+Link to gitpod <https://df1a109d-e82b-4bff-9fcf-4df83a05b2b2.ws.gitpod.idi.ntnu.no/>
 
 ## Contents
 This is the repository for deliverable 2 in the subject IT2810 for group 36. 
