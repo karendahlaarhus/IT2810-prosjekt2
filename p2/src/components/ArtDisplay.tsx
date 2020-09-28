@@ -18,10 +18,6 @@ export default function ArtDisplay(props: Props) {
   const [detail, setDetail] = useState(details.color);
   const [orange, setOrange] = useState(orangeColor.on);
 
-  /*  const [theme, setTheme] = JSON.parse(sessionStorage.getItem("themes")) || useState(themes.dark); //for context tutorial video
-  const [detail, setDetail] = useState(details.color);
-  const [orange, setOrange] = useState(orangeColor.on); */
-
   function toggleTheme() {
     if (detail === details.color) {
       setTheme(themes.light);
