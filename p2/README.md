@@ -70,7 +70,7 @@ We have also user tested our application on multiple units of different size, an
 During the tests we systematically tested that all elements were shown and functionality worked as expected. 
 
 
-## Use of Git og Code standards
+## Git and Coding standards
 We have actively used issues in GitLab to divide the project into smaller parts, and then made a branch for each issue. Using GitLab to create our branches made it easy to give our branches appropriate names, including the issuenumber. However the group has not been consistent in marking commit-messages with the #issuenumber, which would have made it clearer which issue the commits either contributes to or resolves.
 
 After completing an issue, the branch has been merged into our dev-branch. When everything was done we pushed the project to master, after all team-members had reviewed the code. In this way the master-branch stayed protected. 
