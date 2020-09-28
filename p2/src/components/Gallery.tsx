@@ -58,8 +58,16 @@ export default class Gallery extends Component {
     const new_music = !this.state.music;
     console.log("new music: " + new_music);
     sessionStorage.setItem("audio", JSON.stringify(new_music));
-    
   };
+
+  componentDidMount(){
+    const music = sessionStorage.getItem('audio');
+    if (music){
+      this.setState({count: Number(sessionStorage.getItem("count") || 1),
+      music: JSON.parse(music),
+      author: sessionStorage.getItem("author") || "johnson" })
+    }
+  }
 
   /**
    * Called everytime the user wants to change author.
@@ -93,9 +101,9 @@ export default class Gallery extends Component {
   };
 
   handleRetrieveFavorite = () => {
-    const count_string = localStorage.getItem("count");
+    const countString = localStorage.getItem("count");
     const author = localStorage.getItem("author");
-    const music_string = localStorage.getItem("music");
+    const musicString = localStorage.getItem("music");
     var count;
     var music;
 
@@ -103,20 +111,14 @@ export default class Gallery extends Component {
      * Since JSON does not let us parse a value that is possible null, we check that the value is not,
      * before we parse it back to a JavaScript object.
      */
-    if (count_string != null && music_string != null) {
-      count = JSON.parse(count_string);
-      music = JSON.parse(music_string);
+    if (countString != null && musicString != null) {
+      count = JSON.parse(countString);
+      music = JSON.parse(musicString);
       this.setState({ count, author, music });
     }
   };
-  componentDidMount(){
-    const musikk = sessionStorage.getItem('audio');
-    if (musikk){
-      this.setState({count: Number(sessionStorage.getItem("count") || 1),
-      music: JSON.parse(musikk),
-      author: sessionStorage.getItem("author") || "johnson" })
-    }
-  }
+
+
   render() {
     console.log("current count state: " + this.state.count);
     console.log("current music state: " + this.state.music);

@@ -15,7 +15,6 @@ All the functionalities are then displayed in the file called `Gallery.tsx`, whi
 We have used state and props to iterate through the interactive SVG images. A prop called `count` is  updated every time a user displays a new image, and this prop  is then passed to the other components which then updates the images based on its state. Same goes for the poetries. We have structured both the poems and the images in separate lists, which makes it easy for us to loop through the lists based on the already mentioned `state.count`. 
 
 
-
 ## Ajax
 We have used http://poetrydb.org/ to load the poems. Asynchronous JavaScript is used to fetch the poems based on the previous mentioned `state.count`. 
 
@@ -59,14 +58,17 @@ The media query for smartphone is limited to work on screens with max-width 959p
 
 Tablet media query is limited to screen-width between 960px and 2318px. 
 
-## Node.js and NPM
 
 ## Testing
-The project shows setup of snapshot testing with Jest. All tests are written in the App.tests.tsx file. 
+We have set up testing in Jest, and all tests are written in `App.tests.tsx`. Since the tests in this project not were supposed to be very comprehensive and mainly should show the setup, we only set up a snapshot test of our App component. The test can be run by writing `npm run test` while in the p2 folder. 
 
-We have also user tested our application on multiple units of different size, and performed cross-browser-testing. The website has responsive web design, and its user interface adapts to screens of different sizes. We have mainly used the inspector-tool in Google Chrome to simulate how the website will respond to different devices and sizes. We have also tested on an iPhone 11, both horizontally and vertically. 
+We have also user tested our application on multiple units of different size, and performed cross-browser-testing (Safari and Google Chrome). The website has responsive web design, and its user interface adapts to screens of different sizes. We have mainly used the developer tools in Google Chrome to simulate how the website will respond to different devices and sizes, but we have also tested on an iPhone 11, both horizontally and vertically without major issues. 
+During the tests we systematically tested that all elements and functionality worked as expected. 
 
-## Bruk av Git, Koding
-Our code is structured and all components are named reasonably. 
 
-We have actively used and issues and associated branches in our workflow. We started by looking at all the different compontents we needed in our project, divided them into issues made a branch for each of the issues. Using GitLab to create our branches made it easy to give our branches names after which issue is being worked on, however the group has not been consistent in marking commit-messages with the #issuenumber, which would have made the commits easier to read as they mark which issue the either contribute to ot resolve.
+## Bruk av Git og code standards
+We have actively used issues in GitLab to divide the project into smaller parts, and then made a branch for each issue. Using GitLab to create our branches made it easy to give our branches appropriate names, including the issuenumber. However the group has not been consistent in marking commit-messages with the #issuenumber, which would have made it clearer which issue the commits either contributes to or resolves.
+
+After completing an issue, the branch has been merged into our dev-branch. When everything was done we pushed the project to master, after all team-members had reviewed the code. In this way the master-branch stayed protected. 
+
+We have named our files, classes, functions and variables using camelCase as naming convention. 
