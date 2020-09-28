@@ -62,7 +62,7 @@ Tablet media query is limited to screen-width between 960px and 2318px.
 ## Testing
 We have set up testing in Jest, and all tests are written in `App.tests.tsx`. Since the tests in this project not were supposed to be very comprehensive and mainly should show the setup, we only set up a snapshot test of our App component. The test can be run by writing `npm run test` while in the p2 folder. 
 
-We have also user tested our application on multiple units of different size, and performed cross-browser-testing (Safari and Google Chrome). The website has responsive web design, and its user interface adapts to screens of different sizes. We have mainly used the developer tools in Google Chrome to simulate how the website will respond to different devices and sizes, but we have also tested on an iPhone 11, both horizontally and vertically. 
+We have also user tested our application on multiple units of different size, and performed cross-browser-testing (Safari and Google Chrome). The website has a responsive web design, and its user interface adapts to screens of different sizes. We have mainly used the developer tools in Google Chrome to simulate how the website will respond to different devices and sizes, but we have also tested on an iPhone 11, both horizontally and vertically. 
 During the tests we systematically tested that all elements were shown and functionality worked as expected. 
 
 
@@ -71,4 +71,4 @@ We have actively used issues in GitLab to divide the project into smaller parts,
 
 After completing an issue, the branch has been merged into our dev-branch. When everything was done we pushed the project to master, after all team-members had reviewed the code. In this way the master-branch stayed protected. 
 
-We have named our files, classes, functions and variables using camelCase as naming convention. 
+We have named our files, classes, functions and variables using the camelCase naming convention. 
