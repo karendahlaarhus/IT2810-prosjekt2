@@ -9,4 +9,5 @@ Further documentation can be found in `p2/README.md`
 ## How to run the app
 To run the app, write `npm start` in your terminal while in the p2 folder.
 
-To run the tests, write `npm run test` from the same folder. 
+To run the tests, first import `react-test-renderer` by writing `npm i react-test-renderer` in your terminal.  
+To run the test, write: `npm run test`. 
