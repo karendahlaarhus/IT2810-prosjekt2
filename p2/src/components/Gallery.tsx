@@ -54,14 +54,11 @@ export default class Gallery extends Component {
    */
 
   handleMusic = () => {
-    this.setState({ music: !this.state.music });
+    this.setState({ music: !this.state.music});
     const new_music = !this.state.music;
-
-    if (new_music === true) {
-      sessionStorage.setItem("music", JSON.stringify(true));
-    } else {
-      sessionStorage.setItem("music", JSON.stringify(false));
-    }
+    console.log("new music: " + new_music);
+    sessionStorage.setItem("audio", JSON.stringify(new_music));
+    
   };
 
   /**
@@ -111,8 +108,18 @@ export default class Gallery extends Component {
       this.setState({ count, author, music });
     }
   };
-
+  componentDidMount(){
+    const musikk = sessionStorage.getItem('audio');
+    if (musikk){
+      this.setState({count: Number(sessionStorage.getItem("count") || 1),
+      music: JSON.parse(musikk),
+      author: sessionStorage.getItem("author") || "johnson" })
+    }
+  }
   render() {
+    console.log("current count state: " + this.state.count);
+    console.log("current music state: " + this.state.music);
+
     return (
       <div>
         <div id="buttons_interaction">
