@@ -8,4 +8,4 @@ This is the repository for deliverable 2 in the subject IT2810 for group 36.
 To run the app, write 
 `npm start` in your terminal from the p2 folder.
 
-To run the tests, write `npm test` from the same folder. 
+To run the tests, write `npm run test` from the same folder. 
