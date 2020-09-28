@@ -7,11 +7,17 @@ export default class Gallery extends Component {
   state = {
     count: Number(sessionStorage.getItem("count") || 1),
     music: true,
-    author: sessionStorage.getItem("author") || "johnson",
+    author: sessionStorage.getItem("author") || "johnson"
   };
 
-
-
+  /**
+   * Called everytime the user presses the arrow to the right.
+   * We do not want the number to be greater than 4, hence it is setted to 0 if it does.
+   * sessionStorage lets us retreive the current information when the page is reloaded.
+   *
+   * Since React uses time to update count's state, it was necessary to intermediate store the new state
+   * in a different variable, which is then used to set the state.
+   */
   handleNext = () => {
     if (this.state.count === 4) {
       this.setState({ count: 0 });
@@ -22,6 +28,11 @@ export default class Gallery extends Component {
       sessionStorage.setItem("count", JSON.stringify(this.state.count + 1));
     }
   };
+
+  /**
+   * Similiar to handleNext, except that we do not want count's state to be lower than 0, hence it is set
+   * to 4 everytime it does.
+   */
 
   handlePrevious = () => {
     if (this.state.count === 0) {
@@ -34,6 +45,14 @@ export default class Gallery extends Component {
     }
   };
 
+  /**
+   * The music toggles between the values true and false, hence if the value is true, we
+   * want it to be false, and the other way around.
+   * Due to the same problem about React not updating the states fast enough,
+   * it is created a local variable here as well, which is then used to check which
+   * boolean value we need to store in session storage.
+   */
+
   handleMusic = () => {
     this.setState({ music: !this.state.music});
     const new_music = !this.state.music;
@@ -41,6 +60,12 @@ export default class Gallery extends Component {
     sessionStorage.setItem("audio", JSON.stringify(new_music));
     
   };
+
+  /**
+   * Called everytime the user wants to change author.
+   * Sets the state of the author to the oppsite of the current author,
+   * and stores the information in session storage.
+   */
   handlePoetry = () => {
     if (this.state.author === "johnson") {
       this.setState({ author: "bronte" });
@@ -53,6 +78,12 @@ export default class Gallery extends Component {
     }
   };
 
+
+  /**
+   * handleFavorite the user save the information of the currently displayed art, music and poetry,
+   * which it then can display later using the handleRetrieveFavorite. Uses local storage to save the props'
+   * current states into keys by using the function setItem.
+   */
   handleFavorite = () => {
     const { count, author, music} = this.state;
     localStorage.setItem("count", count.toString());
@@ -68,6 +99,10 @@ export default class Gallery extends Component {
     var count;
     var music;
 
+    /**
+     * Since JSON does not let us parse a value that is possible null, we check that the value is not,
+     * before we parse it back to a JavaScript object.
+     */
     if (count_string != null && music_string != null) {
       count = JSON.parse(count_string);
       music = JSON.parse(music_string);

@@ -62,7 +62,6 @@ button:hover {
   color: black;
 }
 button {
-  font-size: 1.5vw;
   padding: 7px 20px;
   margin: 2.5vw;
   outline: none;
@@ -71,7 +70,7 @@ button {
   background-color: #f1f3f4;
 }
 button.button_interaction {
-  font-size: 2vw;
+  font-size: 24px;
 }
 
 /* BUTTONS */
@@ -126,6 +125,7 @@ p {
     }
     #buttons_interaction {
       display: flex;
+      font-size: 12px;
       flex-direction: column;
       justify-content: center;
     }
@@ -134,6 +134,10 @@ p {
       display: flex;
       flex-direction: column;
       justify-content: center;
+    }
+
+    button.button_interaction {
+      font-size: 12px;
     }
   }
 }

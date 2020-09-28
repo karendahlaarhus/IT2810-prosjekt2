@@ -37,6 +37,9 @@ export default function Poetry(props: Props) {
     "https://poetrydb.org/author,title/Ben%20Jonson;It%20Is%20Not%20Growing%20Like%20A%20Tree/lines.json"
   ];
 
+  /*
+  Updates the author name and its lists of poems depeding on the state of the prop 'author'
+   */
   if (props.author === "bronte") {
     poems = bronte;
     authorName = "Anne Bronte";
@@ -45,6 +48,10 @@ export default function Poetry(props: Props) {
     authorName = "Ben Johnson";
   }
 
+  /* Using AJAX to fetch poems from poetrydb.com.
+   props.count is a number that changes everytime the user changes image in the slideshow, which
+   is then used to index the correct poem from the list. 
+   */
   useEffect(() => {
     fetch(poems[props.count])
       .then(response => response.json())
@@ -59,12 +66,12 @@ export default function Poetry(props: Props) {
   }, [poems,props.count]);
 
   if (error) {
-  return <div>Error: {error}</div>;
+    return <div>Error: {error}</div>;
   } else {
     return (
-      <div className="poetry" >
+      <div className="poetry">
         <p>Author: {authorName}</p>
-        <br/>
+        <br />
         {contents[0].lines.map(line => (
           <p>{line}</p>
         ))}
