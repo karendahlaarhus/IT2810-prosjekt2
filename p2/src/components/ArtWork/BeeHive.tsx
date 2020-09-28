@@ -4,6 +4,7 @@ import { useContext } from "react";
 import { ThemeContext, DetailContext, OrangeContext } from "../ThemeContext";
 
 function BeeHive() {
+  /* The following variables is used for making changes in the artwork*/
   const theme = useContext(ThemeContext);
   const detail = useContext(DetailContext);
   const orange = useContext(OrangeContext);
