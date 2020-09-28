@@ -66,7 +66,7 @@ export default function Poetry(props: Props) {
         <p>Author: {authorName}</p>
         <br/>
         {contents[0].lines.map(line => (
-          <p key={line}>{line}</p>
+          <p>{line}</p>
         ))}
         <br></br>
       </div>

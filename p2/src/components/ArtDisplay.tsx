@@ -39,7 +39,6 @@ export default function ArtDisplay(props: Props) {
       sessionStorage.setItem("orange", JSON.stringify(orangeColor.on));
     }
   }
-
   const artworks: any = [
     <BusSvg></BusSvg>,
     <HeadWindow></HeadWindow>,

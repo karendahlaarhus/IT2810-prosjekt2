@@ -53,14 +53,12 @@ export default class Gallery extends Component {
     }
   };
 
-  handleColors = () => {};
-
   handleFavorite = () => {
-    const { count, author, music } = this.state;
-
+    const { count, author, music} = this.state;
     localStorage.setItem("count", count.toString());
     localStorage.setItem("music", music.toString());
     localStorage.setItem("author", author);
+
   };
 
   handleRetrieveFavorite = () => {
