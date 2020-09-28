@@ -2,7 +2,7 @@ import * as React from "react";
 import "./BusSvg.css";
 //import ThemeContext from "../theme-context";
 import { useContext } from "react";
-import { ThemeContext, DetailContext, OrangeContext } from "../theme-context";
+import { ThemeContext, DetailContext, OrangeContext } from "../themeContext";
 //import DetailContext from "../theme-context";
 
 function SvgComponent() {
