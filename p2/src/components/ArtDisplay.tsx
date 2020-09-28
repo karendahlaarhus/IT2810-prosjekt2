@@ -4,24 +4,21 @@ import Airplane from "./ArtWork/Airplane";
 import HeadWindow from "./ArtWork/HeadWindow";
 import Tree from "./ArtWork/Tree";
 import BeeHive from "./ArtWork/BeeHive";
-import { themes } from "./ThemeContext";
-import { details } from "./ThemeContext";
-import { orangeColor } from "./ThemeContext";
+import { themes, details, orangeColor } from "./ThemeContext";
 import { ThemeContext, DetailContext, OrangeContext } from "./ThemeContext";
 
+/* Used for slideshow */
 interface Props {
   count: number;
 }
 
 export default function ArtDisplay(props: Props) {
-  const [theme, setTheme] = useState(themes.dark); //for context tutorial video
-  const [detail, setDetail] = useState(details.color);
-  const [orange, setOrange] = useState(orangeColor.on);
 
-  /*  const [theme, setTheme] = JSON.parse(sessionStorage.getItem("themes")) || useState(themes.dark); //for context tutorial video
-  const [detail, setDetail] = useState(details.color);
-  const [orange, setOrange] = useState(orangeColor.on); */
+  const [theme, setTheme] = useState(themes.dark); //for setting context
+  const [detail, setDetail] = useState(details.color); //for setting context
+  const [orange, setOrange] = useState(orangeColor.on); //for setting context
 
+  /* function used to toggle between diffrent themes declared in ThemesContext.tsx*/
   function toggleTheme() {
     if (detail === details.color) {
       setTheme(themes.light);
@@ -40,14 +37,17 @@ export default function ArtDisplay(props: Props) {
     }
   }
 
+  /* List for each artwork, used for slideshow */
   const artworks: any = [
     <BusSvg></BusSvg>,
     <HeadWindow></HeadWindow>,
     <Tree></Tree>,
     <Airplane></Airplane>,
-    <BeeHive></BeeHive>
+    <BeeHive></BeeHive>,
   ];
   return (
+    /*One provider for each created context,
+    used for changing color with help from Context API */
     <OrangeContext.Provider value={orange}>
       <DetailContext.Provider value={detail}>
         <ThemeContext.Provider value={theme}>
