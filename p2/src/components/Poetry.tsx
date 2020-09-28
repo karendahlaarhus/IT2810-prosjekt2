@@ -1,14 +1,3 @@
-//Source: https://reactjs.org/docs/faq-ajax.html
-
-/* 
-Hvordan laste ned ulike dikt: 
-1) Lag et array med alle url'ene, hent den du vil ha basert på indeks
-2) Finn en url med mange dikt, hent ulike dikt fra siden basert på indeks
-
-Viktig at man ikke henter diktene før det er behov for det, siden skal lastes dynamisk
-
-*/
-
 import React, { useState, useEffect } from "react";
 
 interface Props {
@@ -72,8 +61,8 @@ export default function Poetry(props: Props) {
       <div className="poetry">
         <p>Author: {authorName}</p>
         <br />
-        {contents[0].lines.map(line => (
-          <p>{line}</p>
+        {contents[0].lines.map((line,index) => (
+          <p key={index}>{line}</p>
         ))}
         <br></br>
       </div>

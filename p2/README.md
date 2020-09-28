@@ -3,7 +3,7 @@ We have implemented the project using Typescript and Node.js. You run the projec
 
 Enter the folder called `p2` and write `npm start`
 
-To run the tests, write `npm test`
+To run the tests, write `npm run test`
 
 ### Component structure
 We have chosen to structure our project by separating the functionalities for music, poetry and art into separate components. Throughout the project we have tried to outsource our code into different components as often as possible, to make the code more clean and functional. It is also easier to understand the project structure by having components that only contain on type of functionality. Since it was required to use both class and functional components, so we did.  
@@ -29,15 +29,15 @@ We have used local storage to let the user save and retrieve its favourite art. 
 We use session storage to remember which image and poetry the user is currently displaying. When the user refreshes the page, the same combination of image and poem is viewed. This is done by using `sessionStorage.setItem(key, JSON.stringify(value))` every time we set a new state to either one of the props. The saved information about the previous state is then loaded into the props at the beginning of each session, or a default value if there are not any previous state (i. e. if it is a new session). The session storage only works when reloading the page, meaning of the page session is closed, all information in session storage is set back to default. 
 
 
-## SVG eller Canvas
+## SVG
 We have used SVG for the images. Each image has an animation. By pressing a button you can change the colors. We have used the Context-API for this change. By using the Context-API we save time because we do not have to write the same code in multiple components. 
 
  **folder p2/src/components/Artwork** contains all files with SVG elements (as .tsx files) and their corresponding css files. Here you also find theme-context.tsx which is where we create the context. 
-
-**p2/src/components/ArtDisplay.tsx** works as a container for each artwork. In this file we use the context by using context Provider. 
-
-**sources:**  
-We did not make the SVG artworks ourselves, we did however make small changes in coloring and animations (as well as implementing them into React components). The SVG we used can be found here:
+ 
+ **p2/src/components/ArtDisplay.tsx** works as a container for each artwork. In this file we use the context by using context Provider. 
+ 
+ **sources:**  
+We did not make the SVG artworks ourselves, we did however make small changes in coloring and animations (as well as implementing them into React components). The different SVG source codes can be found here:
 
 - Bus svg: <https://codepen.io/iNeedAdult/pen/ZEQqyMg>
 - Window and house svg: <https://codepen.io/xlavoc/pen/OJMwPOy>
@@ -59,3 +59,14 @@ The media query for smartphone is limited to work on screens with max-width 959p
 
 Tablet media query is limited to screen-width between 960px and 2318px. 
 
+## Node.js and NPM
+
+## Testing
+The project shows setup of snapshot testing with Jest. All tests are written in the App.tests.tsx file. 
+
+We have also user tested our application on multiple units of different size, and performed cross-browser-testing. The website has responsive web design, and its user interface adapts to screens of different sizes. We have mainly used the inspector-tool in Google Chrome to simulate how the website will respond to different devices and sizes. We have also tested on an iPhone 11, both horizontally and vertically. 
+
+## Bruk av Git, Koding
+Our code is structured and all components are named reasonably. 
+
+We have actively used and issues and associated branches in our workflow. We started by looking at all the different compontents we needed in our project, divided them into issues made a branch for each of the issues. Using GitLab to create our branches made it easy to give our branches names after which issue is being worked on, however the group has not been consistent in marking commit-messages with the #issuenumber, which would have made the commits easier to read as they mark which issue the either contribute to ot resolve.
