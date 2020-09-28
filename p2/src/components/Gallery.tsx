@@ -7,7 +7,7 @@ export default class Gallery extends Component {
   state = {
     count: Number(sessionStorage.getItem("count") || 1),
     music: !sessionStorage.getItem("music"),
-    author: sessionStorage.getItem("author") || "johnson"
+    author: sessionStorage.getItem("author") || "johnson",
   };
 
   handleNext = () => {
@@ -110,13 +110,6 @@ export default class Gallery extends Component {
             >
               &#8249;
             </button>
-            <div id="box">
-              <ArtDisplay count={this.state.count}></ArtDisplay>
-              <Poetry
-                count={this.state.count}
-                author={this.state.author}
-              ></Poetry>
-            </div>
             <button
               id="btnRound"
               className="button_interaction"
@@ -124,6 +117,16 @@ export default class Gallery extends Component {
             >
               &#8250;
             </button>
+          </div>
+
+          <div id="gallery-box">
+            <div id="box">
+              <ArtDisplay count={this.state.count}></ArtDisplay>
+              <Poetry
+                count={this.state.count}
+                author={this.state.author}
+              ></Poetry>
+            </div>
           </div>
         </div>
       </div>
