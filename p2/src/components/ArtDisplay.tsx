@@ -40,7 +40,6 @@ export default function ArtDisplay(props: Props) {
     }
   }
 
-  const [error, setError] = useState(null);
   const artworks: any = [
     <BusSvg></BusSvg>,
     <HeadWindow></HeadWindow>,

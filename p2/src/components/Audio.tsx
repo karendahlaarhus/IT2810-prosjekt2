@@ -4,8 +4,7 @@ interface Props {
   music: boolean;
 }
 
-export default function Audio(this: any, props: Props) {
-  const [error, setError] = useState(null);
+  export default function Audio(this: any, props: Props) {
   const [audio, setAudio] = useState(require('../assets/media/bensound-buddy.mp3'))
   const audioRef = React.useRef<HTMLAudioElement>(null);
   //const audio = props.music ? require('../assets/media/bensound-buddy.mp3') : require('../assets/media/bensound-creepy.mp3') ;
@@ -19,10 +18,7 @@ export default function Audio(this: any, props: Props) {
   }, [props.music])
   
 
-  if (error) {
-    return <div>Error: </div>;
-  } else {
-    return (
+  return (
       <div id="audioWrapper">
         <audio controls ref={audioRef} >
           <source src={audio}  type='audio/mpeg'/>
@@ -30,6 +26,5 @@ export default function Audio(this: any, props: Props) {
       </div>
     );
   }
-}
 
 
