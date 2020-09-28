@@ -29,19 +29,33 @@ We have used local storage to let the user save and retrieve its favourite art. 
 We use session storage to remember which image and poetry the user is currently displaying. When the user refreshes the page, the same combination of image and poem is viewed. This is done by using `sessionStorage.setItem(key, JSON.stringify(value))` every time we set a new state to either one of the props. The saved information about the previous state is then loaded into the props at the beginning of each session, or a default value if there are not any previous state (i. e. if it is a new session). The session storage only works when reloading the page, meaning of the page session is closed, all information in session storage is set back to default. 
 
 
-## SVG
+## SVG eller Canvas
+We have used SVG for the images. Each image has an animation. By pressing a button you can change the colors. We have used the Context-API for this change. By using the Context-API we save time because we do not have to write the same code in multiple components. 
 
-We have used SVG for the images. Each image has an animation. By pressing a button you can change the colors. We have used the Context-API for this change. By using the Context-API we save time because we do not have to write the same code in multiple components.
+ **folder p2/src/components/Artwork** contains all files with SVG elements (as .tsx files) and their corresponding css files. Here you also find theme-context.tsx which is where we create the context. 
 
-**folder p2/src/components/Artwork** contains all files with SVG elements (as .tsx files) and their corresponding css files. Here you also find theme-context.tsx which is where we create the context.
-
-**p2/src/components/ArtDisplay.tsx** works as a container for each artwork. In this file we use the context by using context Provider.
+**p2/src/components/ArtDisplay.tsx** works as a container for each artwork. In this file we use the context by using context Provider. 
 
 **sources:**  
 We did not make the SVG artworks ourselves, we did however make small changes in coloring and animations (as well as implementing them into React components). The SVG we used can be found here:
 
-Bus svg: <https://codepen.io/iNeedAdult/pen/ZEQqyMg>
-Window and house svg: <https://codepen.io/xlavoc/pen/OJMwPOy>
-Tree svg: <https://codepen.io/uiswarup/pen/MWWNOjo>
-Airplane svg: <https://codepen.io/lionelB/pen/gckDu>
-BeeHive svg: <https://codepen.io/joygarcia4/pen/NqqOZe>
+- Bus svg: <https://codepen.io/iNeedAdult/pen/ZEQqyMg>
+- Window and house svg: <https://codepen.io/xlavoc/pen/OJMwPOy>
+- Tree svg: <https://codepen.io/uiswarup/pen/MWWNOjo>
+- Airplane svg: <https://codepen.io/lionelB/pen/gckDu>
+- BeeHive svg: <https://codepen.io/joygarcia4/pen/NqqOZe>
+
+
+## Responsive web design
+To make the webpage responsive we have used flexboxes. Instead of pixels we have often used vh and vw which scales better when the window shrinks or gets bigger, since vw and vh is relative to respectively  1% of the width and height of the viewport. 
+
+We have declared the viewport as following: 
+```
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>´
+```
+We use mediaqueries to make the design adapt to smaller screens like smartphone and tablet. 
+
+The media query for smartphone is limited to work on screens with max-width 959px. In this media query set `flex-direction:column` such that buttons arrange in a column instead of a row. 
+
+Tablet media query is limited to screen-width between 960px and 2318px. 
+
